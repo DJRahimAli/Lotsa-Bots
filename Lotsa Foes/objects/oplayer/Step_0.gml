@@ -141,7 +141,7 @@ angle = ( round(direction / angleInterval) ) mod directions;
 //angle = ( round(point_direction(0,0,hDir,vDir) / angleInterval) ) mod directions;
 
 
-if ( spriteData[weaponCurrent][weaponState][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
+if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
 
 
 //angle = round( round(direction / angleInterval) * angleInterval ) mod 360;

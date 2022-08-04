@@ -59,17 +59,21 @@ angleInterval = ( 360 / directions );
 //directions = ( 360 / angleInterval );
 //directions = 8;
 
+characterCurrent = character.arrow;
 weaponCurrent = weapon.unarmed;
-weaponState = weaponstate.idle;
+weaponStateCurrent = weaponstate.idle;
 
 
-for (var i = 0; i < weapon.size; i++)
+for (var i = 0; i < character.size; i++)
 {
-	for (var j = 0; j < weaponstate.size; j++)
+	for (var j = 0; j < weapon.size; j++)
 	{
-		for (var k = 0; k < directions; k++)
+		for (var k = 0; k < weaponstate.size; k++)
 		{
-			spriteData[i][j][k] = [-3, 1, 1, 0, c_white, 1];
+			for (var l = 0; l < directions; l++)
+			{
+				spriteData[i][j][k][l] = [-3, 1, 1, 0, c_white, 1];
+			}
 		}
 	}
 }
@@ -78,17 +82,20 @@ for (var i = 0; i < weapon.size; i++)
 WeaponSpriteData();
 
 
-defaultarray = spriteData[0][0][0];
+defaultarray = spriteData[0][0][0][0];
 
-for (var i = 0; i < weapon.size; i++)
+for (var i = 0; i < character.size; i++)
 {
-	for (var j = 0; j < weaponstate.size; j++)
+	for (var j = 0; j < weapon.size; j++)
 	{
-		while( array_length(spriteData[i][j]) < directions ) array_push(spriteData[i][j], [-3, 1, 1, 0, c_white, 1]);
-		
-		for (var k = 0; k < directions; k++)
+		for (var k = 0; k < weaponstate.size; k++)
 		{
-			while( array_length(spriteData[i][j][k]) < array_length(defaultarray) ) array_push(spriteData[i][j][k], defaultarray[array_length(spriteData[i][j][k])]);
+			while( array_length(spriteData[i][j][k]) < directions ) array_push(spriteData[i][j][k], [-3, 1, 1, 0, c_white, 1]);
+		
+			for (var l = 0; l < directions; l++)
+			{
+				while( array_length(spriteData[i][j][k][l]) < array_length(defaultarray) ) array_push(spriteData[i][j][k][l], defaultarray[array_length(spriteData[i][j][k][l])]);
+			}
 		}
 	}
 }

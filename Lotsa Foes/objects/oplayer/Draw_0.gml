@@ -1,4 +1,4 @@
-var array = spriteData[weaponCurrent][weaponState][angle];
+var array = spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle];
 
 sprite_index = array[sprite.index];
 

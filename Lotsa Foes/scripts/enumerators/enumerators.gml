@@ -1,5 +1,12 @@
 function EnumInit()
 {
+	enum character
+	{
+		none,
+		arrow,
+		size
+	}
+	
 	enum weapon
 	{
 		none,
