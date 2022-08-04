@@ -5,6 +5,7 @@
     {"id":{"name":"round_positon","path":"scripts/round_positon/round_positon.yy",},"order":2,},
     {"id":{"name":"ceil_signed","path":"scripts/ceil_signed/ceil_signed.yy",},"order":1,},
     {"id":{"name":"sArrowu","path":"sprites/sArrowu/sArrowu.yy",},"order":1,},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":1,},
     {"id":{"name":"sPixel","path":"sprites/sPixel/sPixel.yy",},"order":2,},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},"order":0,},
     {"id":{"name":"SetVelocity","path":"scripts/SetVelocity/SetVelocity.yy",},"order":3,},
