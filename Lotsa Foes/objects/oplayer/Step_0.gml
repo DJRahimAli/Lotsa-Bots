@@ -109,7 +109,7 @@ if ( !noclip )
 	//	hspMove = 0;
 	//	hsp = 0;
 	//}
-	//x += hsp;
+	x += hsp;
 
 	////Vertical Collision
 	////vsp = min( vsp + grvCurrent, vspMax );
@@ -121,7 +121,7 @@ if ( !noclip )
 	//	vspMove = 0;
 	//	vsp = 0;
 	//}
-	//y += vsp;
+	y += vsp;
 }
 else
 {
@@ -131,23 +131,37 @@ else
 #endregion
 
 #region Directional Sprite Code
+
+if ( aiming )
+{
 var mDir = point_direction( x, y, mouse_x, mouse_y );
 var Diff = angle_difference( mDir, direction );
-direction += Diff * 0.2;
+direction += Diff * angleAimDelay;
 
 angle = ( round(direction / angleInterval) ) mod directions;
-
-
-//angle = ( round(point_direction(0,0,hDir,vDir) / angleInterval) ) mod directions;
-
-
-if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
 
 
 //angle = round( round(direction / angleInterval) * angleInterval ) mod 360;
 
 //image_angle = angle;
+}
+else
+{
+	if ( hDir != 0 || vDir != 0 )
+	{
+		var pDir = point_direction(0, 0, hsp, vsp );
+		Diff = angle_difference( pDir, direction );
+		direction += Diff * anglePlayerDelay;
+	
+		angle = ( round( direction / angleInterval) ) mod directions;
+	}
+}
 
+if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
 
 //show_debug_message(angle);
+#endregion
+
+#region Weapon State
+
 #endregion

@@ -48,10 +48,17 @@ noclip = false;
 #endregion
 
 
+#region Weapon
+aiming = false;
+#endregion
+
+
 #region Directional Sprite Code
 directions = 8;
 
 angle = 0;
+anglePlayerDelay = 0.2;
+angleAimDelay = 0.2;
 anglePrevious = 0;
 angleInterval = ( 360 / directions );
 

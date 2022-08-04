@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"sArrowr","path":"sprites/sArrowr/sArrowr.yy",},"order":0,},
+    {"id":{"name":"oHurtbox","path":"objects/oHurtbox/oHurtbox.yy",},"order":2,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"round_positon","path":"scripts/round_positon/round_positon.yy",},"order":2,},
     {"id":{"name":"ceil_signed","path":"scripts/ceil_signed/ceil_signed.yy",},"order":1,},
