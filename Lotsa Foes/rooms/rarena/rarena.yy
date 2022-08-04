@@ -14,7 +14,8 @@
   ],
   "layers": [
     {"assets":[
-        {"x":768.0,"y":416.0,"spriteId":{"name":"sMissing","path":"sprites/sMissing/sMissing.yy",},"ignore":false,"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"inheritItemSettings":false,"resourceVersion":"1.0","name":"graphic_5324A699","tags":[],"resourceType":"GMRSpriteGraphic",},
+        {"x":288.0,"y":608.0,"spriteId":{"name":"sMissing","path":"sprites/sMissing/sMissing.yy",},"ignore":false,"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"inheritItemSettings":false,"resourceVersion":"1.0","name":"graphic_5324A699","tags":[],"resourceType":"GMRSpriteGraphic",},
+        {"x":352.0,"y":576.0,"spriteId":{"name":"sPixel","path":"sprites/sPixel/sPixel.yy",},"ignore":false,"headPosition":0.0,"rotation":0.0,"scaleX":129.0,"scaleY":129.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"inheritItemSettings":false,"resourceVersion":"1.0","name":"graphic_79291763","tags":[],"resourceType":"GMRSpriteGraphic",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Assets","tags":[],"resourceType":"GMRAssetLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":640.0,"y":352.0,"resourceVersion":"1.0","name":"inst_E75AD6","tags":[],"resourceType":"GMRInstance",},
@@ -33,8 +34,8 @@
   "sequenceId": null,
   "roomSettings": {
     "inheritRoomSettings": false,
-    "Width": 1366,
-    "Height": 768,
+    "Width": 768,
+    "Height": 1366,
     "persistent": false,
   },
   "viewSettings": {

@@ -1,10 +1,10 @@
 /// @description 
 // Resolution
-#macro RES_W 270
-#macro RES_H 480
+#macro RES_W 540
+#macro RES_H 960
 
-#macro CAM_RES_W 270
-#macro CAM_RES_H 480
+#macro CAM_RES_W 540
+#macro CAM_RES_H 960
 #macro CAM_SMOOTH 1
 
 // Enable views
