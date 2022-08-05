@@ -3,17 +3,17 @@ function EnumInit()
 	enum character
 	{
 		none,
+		player,
 		arrow,
 		size
 	}
 	
-	enum weapon
+	enum weapons
 	{
 		none,
 		unarmed,
-		pistol,
-		shotgun,
 		smg,
+		shotgun,
 		size
 	}
 	
@@ -21,11 +21,7 @@ function EnumInit()
 	{
 		idle,
 		primary,
-		secondary,
-		startup,
 		pump,
-		reload,
-		empty,
 		size
 	}
 	
@@ -48,6 +44,19 @@ function EnumInit()
 		rot,
 		col,
 		alpha,
+		size
+	}
+	
+	enum weaponvars
+	{
+		sprite,
+		cooldown,
+		amount,
+		timer,
+		length,
+		spd,
+		damage,
+		bullet,
 		size
 	}
 }

@@ -5,6 +5,8 @@ keyRight = keyboard_check(ord("D"));
 keyUp = keyboard_check(ord("W"));
 keyDown = keyboard_check(ord("S"));
 
+keyPrimary = mouse_check_button(mb_left);
+
 keyNoclip = keyboard_check_pressed(ord("V"));
 #endregion
 
@@ -100,68 +102,110 @@ if ( keyNoclip ) noclip = !noclip;
 
 if ( !noclip )
 {
-	////Horizontal Collision
-	//if ( place_meeting( round( x ) + ceil_signed( hsp ), round( y ), oParSolid ) )
-	//{
-	//	while( !place_meeting( x + sign( hsp ), y, oParSolid) ) x += sign( hsp );
-	//	hspPlayer = 0;
-	//	hspVelocity = 0;
-	//	hspMove = 0;
-	//	hsp = 0;
-	//}
-	x += hsp;
-
-	////Vertical Collision
-	////vsp = min( vsp + grvCurrent, vspMax );
-	//if ( place_meeting( round( x ), round( y ) + ceil_signed( vsp ), oParSolid ) )
-	//{
-	//	while( !place_meeting(x, y + sign( vsp ), oParSolid ) ) y += sign( vsp );
-	//	vspPlayer = 0;
-	//	vspVelocity = 0;
-	//	vspMove = 0;
-	//	vsp = 0;
-	//}
-	y += vsp;
-}
-else
-{
-	x += hsp;
-	y += vsp;
-}
-#endregion
-
-#region Directional Sprite Code
-
-if ( aiming )
-{
-var mDir = point_direction( x, y, mouse_x, mouse_y );
-var Diff = angle_difference( mDir, direction );
-direction += Diff * angleAimDelay;
-
-angle = ( round(direction / angleInterval) ) mod directions;
-
-
-//angle = round( round(direction / angleInterval) * angleInterval ) mod 360;
-
-//image_angle = angle;
-}
-else
-{
-	if ( hDir != 0 || vDir != 0 )
+	//Horizontal Collision
+	if ( tile_meeting( round( x ) + ceil_signed( hsp ), round( y ), "Collision" ) )
 	{
-		var pDir = point_direction(0, 0, hsp, vsp );
-		Diff = angle_difference( pDir, direction );
-		direction += Diff * anglePlayerDelay;
-	
-		angle = ( round( direction / angleInterval) ) mod directions;
+		while( !tile_meeting( x + sign( hsp ), y, "Collision") ) x += sign( hsp );
+		hspPlayer = 0;
+		hsp = 0;
 	}
+	if ( tile_meeting( round( x ) + ceil_signed( hsp ), round( y ), "CollisionSmall" ) )
+	{
+		while( !tile_meeting( x + sign( hsp ), y, "CollisionSmall") ) x += sign( hsp );
+		hspPlayer = 0;
+		hsp = 0;
+	}
+	x += hsp;
+	
+	//Vertical Collision
+	if ( tile_meeting( round( x ), round( y ) + ceil_signed( vsp ), "Collision" ) )
+	{
+		while( !tile_meeting(x, y + sign( vsp ), "Collision" ) ) y += sign( vsp );
+		vspPlayer = 0;
+		vsp = 0;
+	}
+	if ( tile_meeting( round( x ), round( y ) + ceil_signed( vsp ), "CollisionSmall" ) )
+	{
+		while( !tile_meeting(x, y + sign( vsp ), "CollisionSmall" ) ) y += sign( vsp );
+		vspPlayer = 0;
+		vsp = 0;
+	}
+	y += vsp;
 }
-
-if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
-
-//show_debug_message(angle);
+else
+{
+	x += hsp;
+	y += vsp;
+}
 #endregion
 
 #region Weapon State
-
+switch (weaponStateCurrent)
+{
+	case weaponstate.idle:
+	{
+		
+		cooldown = weapon[weaponCurrent][weaponvars.cooldown];
+		
+		if (keyPrimary)
+		{
+			var mDir = point_direction( x, y, mouse_x, mouse_y );
+			var Diff = angle_difference( mDir, direction );
+			
+			if ( !firstShot ) direction += Diff * angleAimDelay; else direction = mDir;
+			
+			firstShot = false;
+				
+			angle = ( round(direction / angleInterval) ) mod directions;
+				
+			if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
+				
+			if ( cooldown != 0 )
+			{
+				repeat(weapon[weaponCurrent][weaponvars.amount])
+				{
+					with ( instance_create_layer( x, y, "Instances", oHurtbox ) ) 
+					{
+						sprite_index = other.weapon[other.weaponCurrent][weaponvars.sprite];
+						timer  = other.weapon[other.weaponCurrent][weaponvars.timer];
+						length = other.weapon[other.weaponCurrent][weaponvars.length];
+						spd	   = other.weapon[other.weaponCurrent][weaponvars.spd];
+						damage = other.weapon[other.weaponCurrent][weaponvars.damage];
+						bullet = other.weapon[other.weaponCurrent][weaponvars.bullet];
+						dir = round(other.direction);
+					}
+				}
+			}
+		}
+		else
+		{
+			firstShot = true;
+			
+			if ( hsp != 0 || vsp != 0 )
+			{
+				var pDir = point_direction(0, 0, hsp, vsp );
+				Diff = angle_difference( pDir, direction );
+				direction += Diff * anglePlayerDelay;
+			
+				angle = ( round( direction / angleInterval) ) mod directions;
+			}
+			
+			if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
+		}
+		
+		weaponStateCurrent = weaponstate.primary;
+	} break;
+	
+	case weaponstate.primary:
+	{
+		cooldown = max( 0, cooldown-1 );
+		
+		if ( cooldown <= 0 ) weaponStateCurrent = weaponstate.idle;
+	}
+	
+	case weaponstate.pump:
+	{
+		
+	}
+}
 #endregion

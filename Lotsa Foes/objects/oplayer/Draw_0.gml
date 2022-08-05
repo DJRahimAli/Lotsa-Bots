@@ -11,6 +11,8 @@ image_blend = array[sprite.col];
 
 image_alpha = array[sprite.alpha];
 
+mask_index = sPlayerD;
+
 if ( sprite_index <= -3 ) sprite_index = sMissing;
 
 if ( sprite_index != -1 ) draw_self();

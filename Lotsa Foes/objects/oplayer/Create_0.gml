@@ -1,3 +1,5 @@
+hp = 20;
+
 #region Movement Code
 hsp = 0;
 hspPlayer = 0;
@@ -7,13 +9,13 @@ hspFraction = 0;
 hDir = 0;
 
 
-hspMaxGround = 2;
+hspMaxGround = 4;
 //hspMaxAir = 5;
 //hspMaxFly = 5;
 hspMaxCurrent = hspMaxGround; //0;
 
 
-hAccelGround = -1;
+hAccelGround = 0.5;
 //hAccelAir = 0.4;
 //hAccelFly = -1;
 hAccelCurrent = hAccelGround; //0;
@@ -33,11 +35,11 @@ vspFraction = 0;
 vDir = 0;
 
 
-vspMaxGround = 2;
+vspMaxGround = 4;
 vspMaxCurrent = vspMaxGround; //0;
 
 
-vAccelGround = -1;
+vAccelGround = 0.5;
 vAccelCurrent = vAccelGround; //0;
 
 
@@ -49,7 +51,11 @@ noclip = false;
 
 
 #region Weapon
-aiming = false;
+cooldown = 0;
+cooldownCurrent = 0;
+firstShot = false;
+WeaponData();
+weaponCurrent = weapons.smg;
 #endregion
 
 
@@ -57,8 +63,8 @@ aiming = false;
 directions = 8;
 
 angle = 0;
-anglePlayerDelay = 0.2;
-angleAimDelay = 0.2;
+anglePlayerDelay = 0.5;
+angleAimDelay = 0.5;
 anglePrevious = 0;
 angleInterval = ( 360 / directions );
 
@@ -66,14 +72,13 @@ angleInterval = ( 360 / directions );
 //directions = ( 360 / angleInterval );
 //directions = 8;
 
-characterCurrent = character.arrow;
-weaponCurrent = weapon.unarmed;
+characterCurrent = character.player;
 weaponStateCurrent = weaponstate.idle;
 
 
 for (var i = 0; i < character.size; i++)
 {
-	for (var j = 0; j < weapon.size; j++)
+	for (var j = 0; j < weapons.size; j++)
 	{
 		for (var k = 0; k < weaponstate.size; k++)
 		{
@@ -93,7 +98,7 @@ defaultarray = spriteData[0][0][0][0];
 
 for (var i = 0; i < character.size; i++)
 {
-	for (var j = 0; j < weapon.size; j++)
+	for (var j = 0; j < weapons.size; j++)
 	{
 		for (var k = 0; k < weaponstate.size; k++)
 		{
