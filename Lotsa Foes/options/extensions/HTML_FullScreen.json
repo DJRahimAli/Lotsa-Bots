@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "HTML_FullScreen",
+    "path": "extensions/HTML_FullScreen/HTML_FullScreen.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}
