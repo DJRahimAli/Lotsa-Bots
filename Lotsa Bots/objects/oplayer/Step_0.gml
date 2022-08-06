@@ -5,7 +5,7 @@ keyRight = keyboard_check(ord("D"));
 keyUp = keyboard_check(ord("W"));
 keyDown = keyboard_check(ord("S"));
 
-keyPrimary = mouse_check_button(mb_left);
+if ( !global.mobileControls ) keyPrimary = mouse_check_button(mb_left);
 
 keyNoclip = keyboard_check_pressed(ord("V"));
 #endregion
@@ -13,7 +13,7 @@ keyNoclip = keyboard_check_pressed(ord("V"));
 #region Movement Code
 
 //Horizontal Movement
-hDir = ( keyRight - keyLeft );
+if ( !global.mobileControls ) hDir = ( keyRight - keyLeft );
 
 if ( hDir == 0 )
 {
@@ -50,7 +50,7 @@ hsp = ( hspPlayer );
 
 
 //Vertical Movement
-vDir = ( keyDown - keyUp );
+if ( !global.mobileControls ) vDir = ( keyDown - keyUp );
 
 if ( vDir == 0 )
 {
@@ -147,9 +147,9 @@ switch (weaponStateCurrent)
 		
 		cooldown = weapon[weaponCurrent][weaponvars.cooldown];
 		
-		if (keyPrimary)
+		if ( keyPrimary )
 		{
-			var mDir = point_direction( x, y, mouse_x, mouse_y );
+			if ( !global.mobileControls ) mDir = point_direction( x, y, mouse_x, mouse_y );
 			var Diff = angle_difference( mDir, direction );
 			
 			if ( !firstShot ) direction += Diff * angleAimDelay; else direction = mDir;

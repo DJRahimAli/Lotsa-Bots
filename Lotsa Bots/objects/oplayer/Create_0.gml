@@ -1,5 +1,17 @@
 hp = 20;
 
+#region Controls
+keyLeft = false;
+keyRight = false;
+
+keyUp = false;
+keyDown = false;
+
+keyPrimary = false;
+
+keyNoclip = false;
+#endregion
+
 #region Movement Code
 hsp = 0;
 hspPlayer = 0;
@@ -60,6 +72,8 @@ weaponCurrent = weapons.smg;
 
 
 #region Directional Sprite Code
+mDir = 0;
+
 directions = 8;
 
 angle = 0;

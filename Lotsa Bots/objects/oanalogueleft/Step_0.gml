@@ -40,3 +40,6 @@ if (!device_mouse_check_button(myTouch, mb_any))
 hDir = map_value( _x, bbox_left, bbox_right, -1, 1 );
 
 vDir = map_value( _y, bbox_top, bbox_bottom, -1, 1 );
+
+oPlayer.hDir = hDir;
+oPlayer.vDir = vDir;

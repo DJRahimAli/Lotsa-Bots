@@ -15,6 +15,8 @@ if ( myTouch == -1 )
 }
 else
 {
+	oPlayer.keyPrimary = true;
+	
 	_x = device_mouse_x_to_gui(myTouch);
 	_y = device_mouse_y_to_gui(myTouch);
 	
@@ -24,6 +26,8 @@ else
 	
 	if (device_mouse_check_button_released(myTouch, mb_any))
 	{
+		oPlayer.keyPrimary = false;
+		
 		myTouch = -1;
 		//image_index = 0;
 		//audio_play_sound(snd_button_click, 1, false);
@@ -40,3 +44,5 @@ if (!device_mouse_check_button(myTouch, mb_any))
 hDir = map_value( _x, bbox_left, bbox_right, -1, 1 );
 
 vDir = map_value( _y, bbox_top, bbox_bottom, -1, 1 );
+
+oPlayer.mDir = point_direction(x, y, _x, _y);
