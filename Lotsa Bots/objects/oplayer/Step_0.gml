@@ -13,7 +13,26 @@ keyNoclip = keyboard_check_pressed(ord("V"));
 #region Movement Code
 
 //Horizontal Movement
-if ( !global.mobileControls ) hDir = ( keyRight - keyLeft );
+if ( !global.mobileControls )
+{
+	var leftInput = abs( keyLeft );
+	var rightInput = abs( keyRight );
+	
+	if ( leftInput <= deadzone ) leftInput = 0;
+	if ( rightInput <= deadzone ) rightInput = 0;
+	
+	hDir = ( (rightInput*sign(keyRight)) - (leftInput*sign(keyLeft)) );
+}
+else
+{
+	var Input = abs( oJoystickLeft.joy_x / oJoystickLeft.radius );
+	if ( Input <= deadzone ) Input = 0;
+	
+	hDir = Input * sign( oJoystickLeft.joy_x / oJoystickLeft.radius );
+	show_debug_message(hDir);
+}
+
+
 
 if ( hDir == 0 )
 {
@@ -50,7 +69,24 @@ hsp = ( hspPlayer );
 
 
 //Vertical Movement
-if ( !global.mobileControls ) vDir = ( keyDown - keyUp );
+if ( !global.mobileControls )
+{
+	var upInput = abs( keyUp );
+	var downInput = abs( keyDown );
+	
+	if ( upInput <= deadzone ) upInput = 0;
+	if ( downInput <= deadzone ) downInput = 0;
+	
+	vDir = ( (downInput*sign(keyDown)) - (upInput*sign(keyUp)) );
+}
+else
+{
+	var Input = abs( oJoystickLeft.joy_y / oJoystickLeft.radius );
+	if ( Input <= deadzone ) Input = 0;
+	
+	vDir = Input * sign( oJoystickLeft.joy_y / oJoystickLeft.radius );
+	show_debug_message(vDir);
+}
 
 if ( vDir == 0 )
 {
@@ -147,19 +183,16 @@ switch (weaponStateCurrent)
 		
 		cooldown = weapon[weaponCurrent][weaponvars.cooldown];
 		
-		if ( keyPrimary )
+		if ( keyPrimary || oJoystickRight.touch_id != -1)
 		{
+			mDir = point_direction( 0, 0, oJoystickRight.joy_x, oJoystickRight.joy_y );
 			if ( !global.mobileControls ) mDir = point_direction( x, y, mouse_x, mouse_y );
 			var Diff = angle_difference( mDir, direction );
 			
 			if ( !firstShot ) direction += Diff * angleAimDelay; else direction = mDir;
 			
 			firstShot = false;
-				
-			angle = ( round(direction / angleInterval) ) mod directions;
-				
-			if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
-				
+			
 			if ( cooldown != 0 )
 			{
 				repeat(weapon[weaponCurrent][weaponvars.amount])
@@ -183,14 +216,10 @@ switch (weaponStateCurrent)
 			
 			if ( hsp != 0 || vsp != 0 )
 			{
-				var pDir = point_direction(0, 0, hsp, vsp );
+				pDir = point_direction(0, 0, sign(hsp), sign(vsp) );
 				Diff = angle_difference( pDir, direction );
 				direction += Diff * anglePlayerDelay;
-			
-				angle = ( round( direction / angleInterval) ) mod directions;
 			}
-			
-			if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
 		}
 		
 		weaponStateCurrent = weaponstate.primary;
@@ -209,3 +238,7 @@ switch (weaponStateCurrent)
 	}
 }
 #endregion
+
+angle = ( round(direction / angleInterval) ) mod directions;
+
+if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;

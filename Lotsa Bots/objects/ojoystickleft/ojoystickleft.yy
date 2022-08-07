@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sAnalogueBase",
-    "path": "sprites/sAnalogueBase/sAnalogueBase.yy",
+    "name": "sJoystickBase",
+    "path": "sprites/sJoystickBase/sJoystickBase.yy",
   },
   "solid": false,
   "visible": true,
@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oAnalogue",
-    "path": "objects/oAnalogue/oAnalogue.yy",
+    "name": "oJoystick",
+    "path": "objects/oJoystick/oJoystick.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,9 +24,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -34,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oAnalogueLeft",
+  "name": "oJoystickLeft",
   "tags": [],
   "resourceType": "GMObject",
 }

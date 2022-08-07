@@ -10,6 +10,8 @@ keyDown = false;
 keyPrimary = false;
 
 keyNoclip = false;
+
+deadzone = 0.2;
 #endregion
 
 #region Movement Code
@@ -72,7 +74,9 @@ weaponCurrent = weapons.smg;
 
 
 #region Directional Sprite Code
-mDir = 0;
+pDir = 270;
+mDir = 270;
+direction = 270;
 
 directions = 8;
 
