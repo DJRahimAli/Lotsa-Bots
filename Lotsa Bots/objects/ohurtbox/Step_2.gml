@@ -22,5 +22,4 @@ timer = max( 0, timer-1 );
 
 if ( timer <= 0 
 || tile_meeting(x, y, "Collision")
-|| tile_meeting(x, y, "CollisionSmall" )
 ) instance_destroy();

@@ -66,7 +66,6 @@ noclip = false;
 
 #region Weapon
 cooldown = 0;
-cooldownCurrent = 0;
 firstShot = false;
 WeaponData();
 weaponCurrent = weapons.smg;

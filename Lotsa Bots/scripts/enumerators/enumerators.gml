@@ -57,6 +57,8 @@ function EnumInit()
 		spd,
 		damage,
 		bullet,
+		pump,
+		spread,
 		size
 	}
 }

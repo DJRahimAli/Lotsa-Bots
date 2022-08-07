@@ -68,8 +68,8 @@ camH = clamp(camH, 0, CAM_RES_H);
 
 
 // Clamp the camera position to room bounds
-x = clamp(x, 0, room_width - camW);
-y = clamp(y, 0, room_height - camH);
+//x = clamp(x, 0, room_width - camW);
+//y = clamp(y, 0, room_height - camH);
 
 
 round_position();
@@ -79,6 +79,14 @@ round_position();
 camera_set_view_pos(camera, x, y);
 camera_set_view_size(camera, camW, camH);
 
+if ( global.mobileControls )
+{
+	oJoystickLeft.x += oCamera.x;
+	oJoystickLeft.y += oCamera.y;
+	
+	oJoystickRight.x += oCamera.x;
+	oJoystickRight.y += oCamera.y;
+}
 
 //Store previous
 mouse_x_previous = mouse_x;

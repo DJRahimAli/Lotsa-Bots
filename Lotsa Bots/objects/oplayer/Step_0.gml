@@ -53,7 +53,7 @@ else
 		hspPlayer = hspMaxCurrent * hDir;
 					
 		//Clamp Horizontal Speed to Max Horizontal Speed
-		hspPlayer = clamp( hspPlayer, -hspMaxCurrent, hspMaxCurrent );
+		hspPlayer = clamp( hspPlayer, -hspMaxCurrent * abs( hDir ), hspMaxCurrent * abs( hDir ) );
 	}
 	else
 	{
@@ -61,12 +61,11 @@ else
 		hspPlayer += hAccelCurrent * hDir;
 					
 		//Clamp Horizontal Speed to Max Horizontal Speed
-		hspPlayer = clamp( hspPlayer, -hspMaxCurrent, hspMaxCurrent );
+		hspPlayer = clamp( hspPlayer, -hspMaxCurrent * abs( hDir ), hspMaxCurrent * abs( hDir ) );
 	}
 }
 
 hsp = ( hspPlayer );
-
 
 //Vertical Movement
 if ( !global.mobileControls )
@@ -107,7 +106,7 @@ else
 		vspPlayer = vspMaxCurrent * vDir;
 					
 		//Clamp Horizontal Speed to Max Horizontal Speed
-		vspPlayer = clamp( vspPlayer, -vspMaxCurrent, vspMaxCurrent );
+		vspPlayer = clamp( vspPlayer, -vspMaxCurrent * abs( vDir ), vspMaxCurrent * abs( vDir ) );
 	}
 	else
 	{
@@ -115,7 +114,7 @@ else
 		vspPlayer += vAccelCurrent * vDir;
 					
 		//Clamp Horizontal Speed to Max Horizontal Speed
-		vspPlayer = clamp( vspPlayer, -vspMaxCurrent, vspMaxCurrent );
+		vspPlayer = clamp( vspPlayer, -vspMaxCurrent * abs( vDir ), vspMaxCurrent * abs( vDir ) );
 	}
 }
 
@@ -145,24 +144,12 @@ if ( !noclip )
 		hspPlayer = 0;
 		hsp = 0;
 	}
-	if ( tile_meeting( round( x ) + ceil_signed( hsp ), round( y ), "CollisionSmall" ) )
-	{
-		while( !tile_meeting( x + sign( hsp ), y, "CollisionSmall") ) x += sign( hsp );
-		hspPlayer = 0;
-		hsp = 0;
-	}
 	x += hsp;
 	
 	//Vertical Collision
 	if ( tile_meeting( round( x ), round( y ) + ceil_signed( vsp ), "Collision" ) )
 	{
 		while( !tile_meeting(x, y + sign( vsp ), "Collision" ) ) y += sign( vsp );
-		vspPlayer = 0;
-		vsp = 0;
-	}
-	if ( tile_meeting( round( x ), round( y ) + ceil_signed( vsp ), "CollisionSmall" ) )
-	{
-		while( !tile_meeting(x, y + sign( vsp ), "CollisionSmall" ) ) y += sign( vsp );
 		vspPlayer = 0;
 		vsp = 0;
 	}
@@ -173,20 +160,41 @@ else
 	x += hsp;
 	y += vsp;
 }
+
+image_speed = clamp(abs(abs(hDir) + abs(vDir)), 0, 1);
+if ( hsp + vsp == 0 )
+{
+	image_speed = 0;
+	image_index = 0;
+}
+show_debug_message(image_speed);
 #endregion
 
 #region Weapon State
+var array = weapon[other.weaponCurrent];
+
 switch (weaponStateCurrent)
 {
 	case weaponstate.idle:
 	{
 		
-		cooldown = weapon[weaponCurrent][weaponvars.cooldown];
+		cooldown = other.weapon[weaponCurrent][weaponvars.cooldown];
 		
-		if ( keyPrimary || oJoystickRight.touch_id != -1)
+		var fire = false;
+		
+		if ( global.mobileControls )
 		{
-			mDir = point_direction( 0, 0, oJoystickRight.joy_x, oJoystickRight.joy_y );
-			if ( !global.mobileControls ) mDir = point_direction( x, y, mouse_x, mouse_y );
+			if ( oJoystickRight.touch_id != -1 ) fire = true;
+		}
+		else
+		{
+			if ( keyPrimary ) fire = true;
+		}
+		
+		if ( fire )
+		{
+			mDir = point_direction( x, y, mouse_x, mouse_y );
+			if ( global.mobileControls ) mDir = point_direction( 0, 0, oJoystickRight.joy_x, oJoystickRight.joy_y );
 			var Diff = angle_difference( mDir, direction );
 			
 			if ( !firstShot ) direction += Diff * angleAimDelay; else direction = mDir;
@@ -199,13 +207,14 @@ switch (weaponStateCurrent)
 				{
 					with ( instance_create_layer( x, y, "Instances", oHurtbox ) ) 
 					{
-						sprite_index = other.weapon[other.weaponCurrent][weaponvars.sprite];
-						timer  = other.weapon[other.weaponCurrent][weaponvars.timer];
-						length = other.weapon[other.weaponCurrent][weaponvars.length];
-						spd	   = other.weapon[other.weaponCurrent][weaponvars.spd];
-						damage = other.weapon[other.weaponCurrent][weaponvars.damage];
-						bullet = other.weapon[other.weaponCurrent][weaponvars.bullet];
-						dir = round(other.direction);
+						sprite_index = array[weaponvars.sprite];
+						timer  = array[weaponvars.timer];
+						length = array[weaponvars.length];
+						spd	   = array[weaponvars.spd];
+						damage = array[weaponvars.damage];
+						bullet = array[weaponvars.bullet];
+						var spread = array[weaponvars.spread];
+						dir = round(other.direction + random_range(-spread, spread));
 					}
 				}
 			}
@@ -222,7 +231,16 @@ switch (weaponStateCurrent)
 			}
 		}
 		
-		weaponStateCurrent = weaponstate.primary;
+		
+		if ( array[weaponvars.pump] == true )
+		{
+			weaponStateCurrent = weaponstate.pump;
+		}
+		else
+		{
+			weaponStateCurrent = weaponstate.primary;
+		}
+		
 	} break;
 	
 	case weaponstate.primary:
@@ -234,7 +252,9 @@ switch (weaponStateCurrent)
 	
 	case weaponstate.pump:
 	{
+		cooldown = max( 0, cooldown-1 );
 		
+		if ( cooldown <= 0 ) weaponStateCurrent = weaponstate.idle;
 	}
 }
 #endregion

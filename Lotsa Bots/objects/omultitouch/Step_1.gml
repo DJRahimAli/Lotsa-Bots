@@ -2,8 +2,8 @@ var _max_devices = 4;
 
 for (var i = 0; i < _max_devices; i++)
 {
-	var _mouse_x = device_mouse_x_to_gui(i);
-	var _mouse_y = device_mouse_y_to_gui(i);
+	var _mouse_x = device_mouse_x(i);
+	var _mouse_y = device_mouse_y(i);
 	
 	var _ui_at_pos = instance_position(_mouse_x, _mouse_y, oParUI);
 	var _held = device_mouse_check_button(i, mb_left);
