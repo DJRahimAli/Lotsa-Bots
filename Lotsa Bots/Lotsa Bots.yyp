@@ -31,6 +31,7 @@
     {"id":{"name":"sPlayerU","path":"sprites/sPlayerU/sPlayerU.yy",},"order":0,},
     {"id":{"name":"sqControls","path":"sequences/sqControls/sqControls.yy",},"order":1,},
     {"id":{"name":"sArrowul","path":"sprites/sArrowul/sArrowul.yy",},"order":2,},
+    {"id":{"name":"scr_set_screen_size","path":"scripts/scr_set_screen_size/scr_set_screen_size.yy",},"order":9,},
     {"id":{"name":"sEnemySaw","path":"sprites/sEnemySaw/sEnemySaw.yy",},"order":10,},
     {"id":{"name":"oEnemySaw","path":"objects/oEnemySaw/oEnemySaw.yy",},"order":1,},
     {"id":{"name":"sArrowd","path":"sprites/sArrowd/sArrowd.yy",},"order":4,},
@@ -64,7 +65,7 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "defaultScriptType": 0,
+  "defaultScriptType": 1,
   "isEcma": false,
   "configs": {
     "name": "Default",

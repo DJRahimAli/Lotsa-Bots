@@ -29,42 +29,12 @@ else
 	
 	
 	// Set camera position
-	if (wheel != 0)
-	{
-		//Set camera position to the target position
-		x = targetX;
-		y = targetY;
-	}
-	else
-	{
-		// Smoothly move the camera to the target position
-		x = lerp(x, targetX, CAM_SMOOTH);
-		y = lerp(y, targetY, CAM_SMOOTH);
-	}
+	
+	// Smoothly move the camera to the target position
+	x = lerp(x, targetX, CAM_SMOOTH);
+	y = lerp(y, targetY, CAM_SMOOTH);
+	
 }
-
-
-// Zooming
-if (wheel != 0)
-{
-	wheel *= 0.1;
-	
-	// Add to size
-	var addW = camW * wheel;
-	var addH = camH * wheel;
-	
-	camW += addW;
-	camH += addH;
-	
-	// Position
-	x -= addW / 2;
-	y -= addH / 2;
-}
-
-
-// Clamp the camera resolution to initial camera resolution
-camW = clamp(camW, 0, CAM_RES_W);
-camH = clamp(camH, 0, CAM_RES_H);
 
 
 // Clamp the camera position to room bounds
@@ -77,7 +47,6 @@ round_position();
 
 // Apply camera position
 camera_set_view_pos(camera, x, y);
-camera_set_view_size(camera, camW, camH);
 
 /*
 if ( global.mobileControls )
