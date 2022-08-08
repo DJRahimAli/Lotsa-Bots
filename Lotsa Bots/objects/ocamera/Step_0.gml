@@ -36,3 +36,5 @@ if ( global.mobileControls )
 	oJoystickRight.x += oCamera.x;
 	oJoystickRight.y += oCamera.y;
 }*/
+
+ScreenScale();

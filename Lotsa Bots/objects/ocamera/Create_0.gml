@@ -1,6 +1,6 @@
 // Resolution
-#macro RES_W 940
-#macro RES_H 960
+#macro RES_W 1440
+#macro RES_H 1440
 
 #macro CAM_SMOOTH 1
 
