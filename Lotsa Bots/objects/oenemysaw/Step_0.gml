@@ -145,4 +145,3 @@ switch (state)
 		if ( cooldownCurrent == 0 ) state = 0;
 	} break;
 }
-show_debug_message(oPlayer.hp);

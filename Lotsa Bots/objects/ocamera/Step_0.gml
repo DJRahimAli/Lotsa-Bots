@@ -88,11 +88,11 @@ camera_set_view_size(camera, camW, camH);
 
 if ( global.mobileControls )
 {
-	oJoystickLeft.x += oCamera.x;
-	oJoystickLeft.y += oCamera.y;
+	oAnalogueLeft.x += oCamera.x;
+	oAnalogueLeft.y += oCamera.y;
 	
-	oJoystickRight.x += oCamera.x;
-	oJoystickRight.y += oCamera.y;
+	oAnalogueRight.x += oCamera.x;
+	oAnalogueRight.y += oCamera.y;
 }
 
 //Store previous

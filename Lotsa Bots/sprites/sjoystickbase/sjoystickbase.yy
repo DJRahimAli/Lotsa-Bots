@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"LayerId":{"name":"aceb31d9-a9d9-4cc7-a86e-f5c870837b1c","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"LayerId":{"name":"d530c385-2923-46c1-883d-5fa79f1b0a98","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"LayerId":{"name":"aceb31d9-a9d9-4cc7-a86e-f5c870837b1c","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sJoystickBase","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {

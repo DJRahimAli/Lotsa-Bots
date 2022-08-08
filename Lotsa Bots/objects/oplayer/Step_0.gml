@@ -21,24 +21,13 @@ keyNoclip = keyboard_check_pressed(ord("V"));
 #region Movement Code
 
 //Horizontal Movement
-if ( !global.mobileControls )
-{
-	var leftInput = abs( keyLeft );
-	var rightInput = abs( keyRight );
-	
-	if ( leftInput <= deadzone ) leftInput = 0;
-	if ( rightInput <= deadzone ) rightInput = 0;
-	
-	hDir = ( (rightInput*sign(keyRight)) - (leftInput*sign(keyLeft)) );
-}
-else
-{
-	var Input = abs( oJoystickLeft.joy_x / oJoystickLeft.radius );
-	if ( Input <= deadzone ) Input = 0;
-	
-	hDir = Input * sign( oJoystickLeft.joy_x / oJoystickLeft.radius );
-}
+var leftInput = abs( keyLeft );
+var rightInput = abs( keyRight );
 
+if ( leftInput <= deadzone ) leftInput = 0;
+if ( rightInput <= deadzone ) rightInput = 0;
+
+hDir = ( (rightInput*sign(keyRight)) - (leftInput*sign(keyLeft)) );
 
 
 if ( hDir == 0 )
@@ -75,23 +64,14 @@ else
 hsp = ( hspPlayer );
 
 //Vertical Movement
-if ( !global.mobileControls )
-{
-	var upInput = abs( keyUp );
-	var downInput = abs( keyDown );
-	
-	if ( upInput <= deadzone ) upInput = 0;
-	if ( downInput <= deadzone ) downInput = 0;
-	
-	vDir = ( (downInput*sign(keyDown)) - (upInput*sign(keyUp)) );
-}
-else
-{
-	var Input = abs( oJoystickLeft.joy_y / oJoystickLeft.radius );
-	if ( Input <= deadzone ) Input = 0;
-	
-	vDir = Input * sign( oJoystickLeft.joy_y / oJoystickLeft.radius );
-}
+var upInput = abs( keyUp );
+var downInput = abs( keyDown );
+
+if ( upInput <= deadzone ) upInput = 0;
+if ( downInput <= deadzone ) downInput = 0;
+
+//vDir = ( (downInput*sign(keyDown)) - (upInput*sign(keyUp)) );
+
 
 if ( vDir == 0 )
 {
@@ -184,18 +164,7 @@ switch (weaponStateCurrent)
 	{
 		cooldown = other.weapon[weaponCurrent][weaponvars.cooldown];
 		
-		var fire = false;
-		
-		if ( global.mobileControls )
-		{
-			if ( oJoystickRight.touch_id != -1 ) fire = true;
-		}
-		else
-		{
-			if ( keyPrimary ) fire = true;
-		}
-		
-		if ( fire )
+		if ( keyPrimary )
 		{
 			mDir = point_direction( x, y, mouse_x, mouse_y );
 			if ( global.mobileControls ) mDir = point_direction( 0, 0, oJoystickRight.joy_x, oJoystickRight.joy_y );
