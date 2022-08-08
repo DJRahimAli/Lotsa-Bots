@@ -24,13 +24,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"LayerId":{"name":"d530c385-2923-46c1-883d-5fa79f1b0a98","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"LayerId":{"name":"aceb31d9-a9d9-4cc7-a86e-f5c870837b1c","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sJoystickBase","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"LayerId":{"name":"d530c385-2923-46c1-883d-5fa79f1b0a98","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"LayerId":{"name":"aceb31d9-a9d9-4cc7-a86e-f5c870837b1c","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sAnalogueBase","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"resourceVersion":"1.0","name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sJoystickBase","path":"sprites/sJoystickBase/sJoystickBase.yy",},
+    "spriteId": {"name":"sAnalogueBase","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -42,7 +42,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f78f0bf3-ede2-453d-a03c-34d571b87c45","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sJoystickBase/sJoystickBase.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"f78f0bf3-ede2-453d-a03c-34d571b87c45","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4020d0e-97c5-434f-b5bb-22bd8ae784dc","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -59,9 +59,9 @@
     "yorigin": 96,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sJoystickBase","path":"sprites/sJoystickBase/sJoystickBase.yy",},
+    "parent": {"name":"sAnalogueBase","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},
     "resourceVersion": "1.4",
-    "name": "sJoystickBase",
+    "name": "sAnalogueBase",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -75,7 +75,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sJoystickBase",
+  "name": "sAnalogueBase",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -21,13 +21,24 @@ keyNoclip = keyboard_check_pressed(ord("V"));
 #region Movement Code
 
 //Horizontal Movement
-var leftInput = abs( keyLeft );
-var rightInput = abs( keyRight );
-
-if ( leftInput <= deadzone ) leftInput = 0;
-if ( rightInput <= deadzone ) rightInput = 0;
-
-hDir = ( (rightInput*sign(keyRight)) - (leftInput*sign(keyLeft)) );
+if ( !global.mobileControls )
+{
+	var leftInput = abs( keyLeft );
+	var rightInput = abs( keyRight );
+	
+	if ( leftInput <= deadzone ) leftInput = 0;
+	if ( rightInput <= deadzone ) rightInput = 0;
+	
+	hDir = ( (rightInput*sign(keyRight)) - (leftInput*sign(keyLeft)) );
+}
+else
+{
+	var Input = abs( oAnalogueLeft.hDir );
+	
+	if ( Input <= deadzone ) Input = 0;
+	
+	hDir = ( Input*sign(oAnalogueLeft.hDir) );
+}
 
 
 if ( hDir == 0 )
@@ -64,14 +75,26 @@ else
 hsp = ( hspPlayer );
 
 //Vertical Movement
-var upInput = abs( keyUp );
-var downInput = abs( keyDown );
-
-if ( upInput <= deadzone ) upInput = 0;
-if ( downInput <= deadzone ) downInput = 0;
-
-//vDir = ( (downInput*sign(keyDown)) - (upInput*sign(keyUp)) );
-
+if ( !global.mobileControls )
+{
+	var upInput = abs( keyUp );
+	var downInput = abs( keyDown );
+	
+	if ( upInput <= deadzone ) upInput = 0;
+	if ( downInput <= deadzone ) downInput = 0;
+	
+	vDir = ( (downInput*sign(keyDown)) - (upInput*sign(keyUp)) );
+}
+else
+{
+	var Input = abs( oAnalogueLeft.vDir );
+	
+	if ( Input <= deadzone ) Input = 0;
+	
+	vDir = ( Input*sign(oAnalogueLeft.vDir) );
+}
+	show_debug_message(hDir)
+	show_debug_message(vDir)
 
 if ( vDir == 0 )
 {
@@ -167,7 +190,7 @@ switch (weaponStateCurrent)
 		if ( keyPrimary )
 		{
 			mDir = point_direction( x, y, mouse_x, mouse_y );
-			if ( global.mobileControls ) mDir = point_direction( 0, 0, oJoystickRight.joy_x, oJoystickRight.joy_y );
+			if ( global.mobileControls ) mDir = oAnalogueRight._direction;
 			var Diff = angle_difference( mDir, direction );
 			
 			if ( !firstShot ) direction += Diff * angleAimDelay; else direction = mDir;
@@ -207,7 +230,7 @@ switch (weaponStateCurrent)
 	case weaponstate.primary:
 	{
 		mDir = point_direction( x, y, mouse_x, mouse_y );
-		if ( global.mobileControls ) mDir = point_direction( 0, 0, oJoystickRight.joy_x, oJoystickRight.joy_y );
+		if ( global.mobileControls ) mDir = oAnalogueRight._direction;
 		var Diff = angle_difference( mDir, direction );
 		
 		direction += Diff * angleAimDelay;

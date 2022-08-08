@@ -86,14 +86,6 @@ round_position();
 camera_set_view_pos(camera, x, y);
 camera_set_view_size(camera, camW, camH);
 
-if ( global.mobileControls )
-{
-	oAnalogueLeft.x += oCamera.x;
-	oAnalogueLeft.y += oCamera.y;
-	
-	oAnalogueRight.x += oCamera.x;
-	oAnalogueRight.y += oCamera.y;
-}
 
 //Store previous
 mouse_x_previous = mouse_x;

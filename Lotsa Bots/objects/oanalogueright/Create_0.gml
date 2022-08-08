@@ -1,7 +1,6 @@
-_x = 0;
-_y = 0;
-
-myTouch = -1;
+joy_x = 0;
+joy_y = 0;
+touch_id = -1;
 
 radius = sprite_width / 2;
 
