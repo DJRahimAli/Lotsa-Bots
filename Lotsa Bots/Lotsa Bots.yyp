@@ -16,6 +16,7 @@
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},"order":2,},
     {"id":{"name":"sJoystickStick","path":"sprites/sJoystickStick/sJoystickStick.yy",},"order":6,},
     {"id":{"name":"sArrowu","path":"sprites/sArrowu/sArrowu.yy",},"order":1,},
+    {"id":{"name":"oWave","path":"objects/oWave/oWave.yy",},"order":15,},
     {"id":{"name":"tCollision","path":"tilesets/tCollision/tCollision.yy",},"order":0,},
     {"id":{"name":"oJoystickRight","path":"objects/oJoystickRight/oJoystickRight.yy",},"order":13,},
     {"id":{"name":"oParUI","path":"objects/oParUI/oParUI.yy",},"order":9,},

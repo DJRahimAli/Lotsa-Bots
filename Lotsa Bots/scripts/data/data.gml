@@ -18,3 +18,9 @@ function WeaponSpriteData()
 	spriteData[character.player][weapons.smg][weaponstate.idle] = [ [sPlayerR, 1, 1, 0, c_white], [sPlayerUR, 1, 1, 0, c_white], [sPlayerU, 1, 1, 0, c_white], [sPlayerUR, -1, 1, 0, c_white], [sPlayerR, -1, 1, 0, c_white], [sPlayerDR, -1, 1, 0, c_white], [sPlayerD, 1, 1, 0, c_white], [sPlayerDR, 1, 1, 0, c_white] ];
 	spriteData[character.player][weapons.smg][weaponstate.primary] = [ [sPlayerR, 1, 1, 0, c_white], [sPlayerUR, 1, 1, 0, c_white], [sPlayerU, 1, 1, 0, c_white], [sPlayerUR, -1, 1, 0, c_white], [sPlayerR, -1, 1, 0, c_white], [sPlayerDR, -1, 1, 0, c_white], [sPlayerD, 1, 1, 0, c_white], [sPlayerDR, 1, 1, 0, c_white] ];
 }
+
+function WaveData()
+{
+	waveData[wave.one] = [ 5, 60 ];
+	waveEnemies = [oEnemySaw];
+}

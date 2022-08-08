@@ -95,12 +95,24 @@ if ( tile_meeting( round( x ) + ceil_signed( hsp ), round( y ), "Collision" ) )
 	while( !tile_meeting( x + sign( hsp ), y, "Collision") ) x += sign( hsp );
 	hsp = 0;
 }
+
+if ( instance_place( round( x ) + ceil_signed( hsp ), round( y ), oEnemySaw ) )
+{
+	while( !instance_place( x + sign( hsp ), y, oEnemySaw) ) x += sign( hsp );
+	hsp = 0;
+}
 x += hsp;
 
 //Vertical Collision
 if ( tile_meeting( round( x ), round( y ) + ceil_signed( vsp ), "Collision" ) )
 {
 	while( !tile_meeting(x, y + sign( vsp ), "Collision" ) ) y += sign( vsp );
+	vsp = 0;
+}
+
+if ( instance_place( round( x ), round( y ) + ceil_signed( vsp ), oEnemySaw ) )
+{
+	while( !instance_place(x, y + sign( vsp ), oEnemySaw ) ) y += sign( vsp );
 	vsp = 0;
 }
 y += vsp;

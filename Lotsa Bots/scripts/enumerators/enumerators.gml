@@ -48,5 +48,20 @@ function EnumInit()
 		spread,
 		size
 	}
+	
+	enum wave
+	{
+		one,
+		two,
+		three,
+		size
+	}
+	
+	enum wavevars
+	{
+		enemyamount,
+		cooldown,
+		size
+	}
 }
 
