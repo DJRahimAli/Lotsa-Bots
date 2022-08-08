@@ -1,52 +1,31 @@
-/// @description 
 // Get current camera position
-x = camera_get_view_x(camera);
-y = camera_get_view_y(camera);
-var camW = camera_get_view_width(camera);
-var camH = camera_get_view_height(camera);
+x = camera_get_view_x(view_camera[view_current]);
+y = camera_get_view_y(view_camera[view_current]);
 
 
-// Zooming controls
-var wheel = mouse_wheel_down() - mouse_wheel_up();
+// Set target camera position
+var targetX, targetY;
+
+targetX = target.x - round(window_get_width() / 2);
+targetY = target.y - round(window_get_height() / 2);
 
 
-// Panning
-if ( mouse_check_button(mb_middle) )
-{
-	var move_x = mouse_x - mouse_x_previous;
-	var move_y = mouse_y - mouse_y_previous;
-	
-	x -= move_x;
-	y -= move_y;
-}
-else
-{
-	// Set target camera position
-	var targetX, targetY;
-	
-	targetX = target.x - round(camW / 2);
-	targetY = target.y - round(camH / 2);
-	
-	
-	// Set camera position
-	
-	// Smoothly move the camera to the target position
-	x = lerp(x, targetX, CAM_SMOOTH);
-	y = lerp(y, targetY, CAM_SMOOTH);
-	
-}
+// Set camera position
+// Smoothly move the camera to the target position
+x = lerp(x, targetX, CAM_SMOOTH);
+y = lerp(y, targetY, CAM_SMOOTH);
 
 
 // Clamp the camera position to room bounds
-x = clamp(x, 0, room_width - camW);
-y = clamp(y, 0, room_height - camH);
+x = clamp(x, 0, room_width - window_get_width());
+y = clamp(y, 0, room_height - window_get_height());
 
 
 round_position();
 
 
 // Apply camera position
-camera_set_view_pos(camera, x, y);
+camera_set_view_pos(view_camera[view_current], x, y);
 
 /*
 if ( global.mobileControls )
@@ -57,7 +36,3 @@ if ( global.mobileControls )
 	oJoystickRight.x += oCamera.x;
 	oJoystickRight.y += oCamera.y;
 }*/
-
-//Store previous
-mouse_x_previous = mouse_x;
-mouse_y_previous = mouse_y;
