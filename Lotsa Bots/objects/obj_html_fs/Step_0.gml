@@ -1,3 +1,4 @@
-
-
-HTML_FS_Step();
+if (keyboard_check_pressed(ord("1")))
+{
+	ToggleFullScreen();
+}

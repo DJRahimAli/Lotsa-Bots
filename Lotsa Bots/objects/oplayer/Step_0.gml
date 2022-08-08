@@ -1,3 +1,11 @@
+flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtract );
+
+if (hp != hpLast)
+{
+	if (hp < hpLast) flashAlphaCurrent = flashAlpha;
+	hpLast = hp;
+}
+
 #region Controls
 keyLeft = keyboard_check(ord("A"));
 keyRight = keyboard_check(ord("D"));
@@ -29,7 +37,6 @@ else
 	if ( Input <= deadzone ) Input = 0;
 	
 	hDir = Input * sign( oJoystickLeft.joy_x / oJoystickLeft.radius );
-	show_debug_message(hDir);
 }
 
 
@@ -84,7 +91,6 @@ else
 	if ( Input <= deadzone ) Input = 0;
 	
 	vDir = Input * sign( oJoystickLeft.joy_y / oJoystickLeft.radius );
-	show_debug_message(vDir);
 }
 
 if ( vDir == 0 )
@@ -161,13 +167,12 @@ else
 	y += vsp;
 }
 
-image_speed = clamp(abs(abs(hDir) + abs(vDir)), 0, 1);
-if ( hsp + vsp == 0 )
+image_speed = clamp(abs(abs(hsp) + abs(vsp)), 0, 1);
+if ( abs(hsp) + abs(vsp) == 0 )
 {
 	image_speed = 0;
 	image_index = 0;
 }
-show_debug_message(image_speed);
 #endregion
 
 #region Weapon State
@@ -177,7 +182,6 @@ switch (weaponStateCurrent)
 {
 	case weaponstate.idle:
 	{
-		
 		cooldown = other.weapon[weaponCurrent][weaponvars.cooldown];
 		
 		var fire = false;
@@ -201,23 +205,22 @@ switch (weaponStateCurrent)
 			
 			firstShot = false;
 			
-			if ( cooldown != 0 )
+			repeat(weapon[weaponCurrent][weaponvars.amount])
 			{
-				repeat(weapon[weaponCurrent][weaponvars.amount])
+				with ( instance_create_layer( x, y, "Instances", oHurtbox ) ) 
 				{
-					with ( instance_create_layer( x, y, "Instances", oHurtbox ) ) 
-					{
-						sprite_index = array[weaponvars.sprite];
-						timer  = array[weaponvars.timer];
-						length = array[weaponvars.length];
-						spd	   = array[weaponvars.spd];
-						damage = array[weaponvars.damage];
-						bullet = array[weaponvars.bullet];
-						var spread = array[weaponvars.spread];
-						dir = round(other.direction + random_range(-spread, spread));
-					}
+					sprite_index = array[weaponvars.sprite];
+					timer  = array[weaponvars.timer];
+					length = array[weaponvars.length];
+					spd	   = array[weaponvars.spd];
+					damage = array[weaponvars.damage];
+					bullet = array[weaponvars.bullet];
+					var spread = array[weaponvars.spread];
+					dir = round(other.direction + random_range(-spread, spread));
 				}
 			}
+			
+			if ( cooldown != 0 ) weaponStateCurrent = weaponstate.primary;
 		}
 		else
 		{
@@ -230,32 +233,21 @@ switch (weaponStateCurrent)
 				direction += Diff * anglePlayerDelay;
 			}
 		}
-		
-		
-		if ( array[weaponvars.pump] == true )
-		{
-			weaponStateCurrent = weaponstate.pump;
-		}
-		else
-		{
-			weaponStateCurrent = weaponstate.primary;
-		}
-		
 	} break;
 	
 	case weaponstate.primary:
 	{
+		mDir = point_direction( x, y, mouse_x, mouse_y );
+		if ( global.mobileControls ) mDir = point_direction( 0, 0, oJoystickRight.joy_x, oJoystickRight.joy_y );
+		var Diff = angle_difference( mDir, direction );
+		
+		direction += Diff * angleAimDelay;
+		
+		
 		cooldown = max( 0, cooldown-1 );
 		
-		if ( cooldown <= 0 ) weaponStateCurrent = weaponstate.idle;
-	}
-	
-	case weaponstate.pump:
-	{
-		cooldown = max( 0, cooldown-1 );
-		
-		if ( cooldown <= 0 ) weaponStateCurrent = weaponstate.idle;
-	}
+		if ( cooldown == 0 ) weaponStateCurrent = weaponstate.idle;
+	} break;
 }
 #endregion
 

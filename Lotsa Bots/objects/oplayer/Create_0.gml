@@ -1,4 +1,10 @@
-hp = 20;
+hp = 100;
+hpLast = hp;
+
+flashAlpha = 0.8;
+flashAlphaCurrent = 0;
+flashSubtract = 0.1;
+flashColor = c_white;
 
 #region Controls
 keyLeft = false;
@@ -73,15 +79,15 @@ weaponCurrent = weapons.smg;
 
 
 #region Directional Sprite Code
-pDir = 270;
-mDir = 270;
 direction = 270;
+pDir = 0;
+mDir = 0;
 
 directions = 8;
 
 angle = 0;
-anglePlayerDelay = 0.5;
-angleAimDelay = 0.5;
+anglePlayerDelay = 0.2;
+angleAimDelay = 0.2;
 anglePrevious = 0;
 angleInterval = ( 360 / directions );
 

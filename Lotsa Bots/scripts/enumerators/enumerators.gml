@@ -21,18 +21,6 @@ function EnumInit()
 	{
 		idle,
 		primary,
-		pump,
-		size
-	}
-	
-	enum weaponfiremode
-	{
-		single,
-		automatic,
-		burstsingle,
-		burstautomatic,
-		pumpsingle,
-		pumpautomatic,
 		size
 	}
 	
@@ -57,7 +45,6 @@ function EnumInit()
 		spd,
 		damage,
 		bullet,
-		pump,
 		spread,
 		size
 	}

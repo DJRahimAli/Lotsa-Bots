@@ -1,8 +1,8 @@
 function WeaponData()
 {
-	weapon[weapons.unarmed] = [ sMissing, 30, 1, 10, 50, 0,  5, false, false,  0 ];
-	weapon[weapons.smg]		= [ sMissing,  5, 1, 30, 0,  20, 2, true,  false,  5 ];
-	weapon[weapons.shotgun] = [ sMissing, 10, 3, 20, 0,  20, 5, true,  true,  15 ];
+	weapon[weapons.unarmed] = [ sMissing, 50, 1, 10, 80, 0,  8, false,   0 ];
+	weapon[weapons.smg]		= [ sMissing, 10, 1, 30,  0,  20, 3, true,   5 ];
+	weapon[weapons.shotgun] = [ sMissing, 20, 3, 20,  0,  20, 2, true,  15 ];
 }
 
 
