@@ -1,4 +1,1 @@
-if (keyboard_check_pressed(ord("1")))
-{
-	ToggleFullScreen();
-}
+HTML_FS_Step();

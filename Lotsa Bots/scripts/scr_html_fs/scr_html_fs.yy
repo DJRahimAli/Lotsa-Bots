@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "HTML_FS",
+    "path": "folders/Extensions/HTML_FS.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ScreenScale",
+  "name": "scr_HTML_FS",
   "tags": [],
   "resourceType": "GMScript",
 }
