@@ -27,6 +27,8 @@ round_position();
 // Apply camera position
 camera_set_view_pos(view_camera[view_current], x, y);
 
+ScreenScale();
+
 /*
 if ( global.mobileControls )
 {
@@ -36,5 +38,3 @@ if ( global.mobileControls )
 	oJoystickRight.x += oCamera.x;
 	oJoystickRight.y += oCamera.y;
 }*/
-
-ScreenScale();

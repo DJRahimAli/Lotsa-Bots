@@ -1,6 +1,6 @@
 // Resolution
-#macro RES_W 1440
-#macro RES_H 1440
+#macro RES_W room_width
+#macro RES_H room_height
 
 #macro CAM_SMOOTH 1
 
