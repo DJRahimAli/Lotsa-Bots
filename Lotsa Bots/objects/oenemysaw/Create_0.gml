@@ -19,7 +19,7 @@ hspFraction = 0;
 hDir = 0;
 
 
-hspMaxGround = 3.2;
+hspMaxGround = 2;
 //hspMaxAir = 5;
 //hspMaxFly = 5;
 hspMaxCurrent = hspMaxGround; //0;
@@ -44,7 +44,7 @@ vspFraction = 0;
 vDir = 0;
 
 
-vspMaxGround = 3.2;
+vspMaxGround = 2;
 vspMaxCurrent = vspMaxGround; //0;
 
 
