@@ -1,10 +1,16 @@
 hp = 100;
 hpLast = hp;
 
-flashAlpha = 0.8;
-flashAlphaCurrent = 0;
-flashSubtract = 0.1;
-flashColor = c_white;
+flashAlphaSpawn = 0.8;
+flashAlphaHurt = 0.8;
+flashAlphaCurrent = flashAlphaSpawn;
+
+flashSubtractSpawn = 0.05;
+flashSubtractHurt = 0.1;
+
+flashColorSpawn = c_blue;
+flashColorHurt = c_white;
+flashColorCurrent = flashColorSpawn;
 
 #region Controls
 keyLeft = false;

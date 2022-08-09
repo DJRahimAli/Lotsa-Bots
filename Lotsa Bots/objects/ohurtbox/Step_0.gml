@@ -21,5 +21,5 @@ depth = oPlayer.depth + sign(oPlayer.y+8 - y);
 timer = max( 0, timer-1 );
 
 if ( timer <= 0 
-|| tile_meeting(x, y, "Collision")
+|| place_meeting(x, y, oCollision)
 ) instance_destroy();

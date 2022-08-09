@@ -49,8 +49,17 @@ function EnumInit()
 		size
 	}
 	
+	enum arena
+	{
+		white,
+		blue,
+		red,
+		size
+	}
+	
 	enum wave
 	{
+		none,
 		one,
 		two,
 		three,
@@ -59,8 +68,8 @@ function EnumInit()
 	
 	enum wavevars
 	{
-		enemyamount,
 		cooldown,
+		enemyamount,
 		size
 	}
 }

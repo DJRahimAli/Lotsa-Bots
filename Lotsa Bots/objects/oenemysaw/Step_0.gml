@@ -1,14 +1,20 @@
-flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtract );
+if ( flashColorCurrent == flashColorSpawn ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractSpawn );
+
+if ( flashColorCurrent == flashColorHurt ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractHurt );
 
 if (hp != hpLast)
 {
-	if (hp < hpLast) flashAlphaCurrent = flashAlpha;
+	if (hp < hpLast)
+	{
+		flashAlphaCurrent = flashAlphaHurt;
+		flashColorCurrent = flashColorHurt;
+	}
 	hpLast = hp;
 }
 
 #region Movement Code
 //Horizontal Movement
-hDir = sign(oPlayer.x - x);
+if ( instance_exists( target ) ) hDir = sign(target.x - x);
 
 if ( hDir == 0 )
 {
@@ -43,7 +49,7 @@ else
 
 
 //Vertical Movement
-vDir = sign(oPlayer.y - y);
+if ( instance_exists( target ) ) vDir = sign(target.bbox_bottom - y);
 
 if ( vDir == 0 )
 {
@@ -90,50 +96,52 @@ vsp -= vspFraction;
 
 
 //Horizontal Collision
-if ( tile_meeting( round( x ) + ceil_signed( hsp ), round( y ), "Collision" ) )
+if ( place_meeting( round( x ) + ceil_signed( hsp ), round( y ), oCollision ) )
 {
-	while( !tile_meeting( x + sign( hsp ), y, "Collision") ) x += sign( hsp );
+	while( !place_meeting( x + sign( hsp ), y, oCollision) ) x += sign( hsp );
 	hsp = 0;
 }
 
-if ( instance_place( round( x ) + ceil_signed( hsp ), round( y ), oEnemySaw ) )
+if ( instance_place( round( x ) + ceil_signed( hsp ), round( y ), oParEnemy ) )
 {
-	while( !instance_place( x + sign( hsp ), y, oEnemySaw) ) x += sign( hsp );
+	while( !instance_place( x + sign( hsp ), y, oParEnemy) ) x += sign( hsp );
 	hsp = 0;
 }
 x += hsp;
 
 //Vertical Collision
-if ( tile_meeting( round( x ), round( y ) + ceil_signed( vsp ), "Collision" ) )
+if ( place_meeting( round( x ), round( y ) + ceil_signed( vsp ), oCollision ) )
 {
-	while( !tile_meeting(x, y + sign( vsp ), "Collision" ) ) y += sign( vsp );
+	while( !place_meeting(x, y + sign( vsp ), oCollision ) ) y += sign( vsp );
 	vsp = 0;
 }
 
-if ( instance_place( round( x ), round( y ) + ceil_signed( vsp ), oEnemySaw ) )
+if ( instance_place( round( x ), round( y ) + ceil_signed( vsp ), oParEnemy ) )
 {
-	while( !instance_place(x, y + sign( vsp ), oEnemySaw ) ) y += sign( vsp );
+	while( !instance_place(x, y + sign( vsp ), oParEnemy ) ) y += sign( vsp );
 	vsp = 0;
 }
 y += vsp;
 
+//wall_escape( oCollision );
+wall_escape( oParEnemy );
 
-image_speed = clamp(abs(abs(hDir) + abs(vDir)), 0, 1);
-if ( abs(hsp) + abs(vsp) == 0 )
-{
-	image_speed = 0;
-	//image_index = 0;
-}
+//image_speed = clamp(abs(abs(hDir) + abs(vDir)), 0, 1);
+//if ( abs(hsp) + abs(vsp) == 0 )
+//{
+//	image_speed = 0;
+//	//image_index = 0;
+//}
 #endregion
 
 switch (state)
 {
 	case 0:
 	{
-		if ( place_meeting( x, y, oPlayer ) )
+		if ( place_meeting( x, y, target ) )
 		{
 			cooldownCurrent = cooldown;
-			oPlayer.hp = max( 0, oPlayer.hp-damage );
+			target.hp = max( 0, target.hp-damage );
 			if ( cooldown != 0 ) state = 1;
 		}
 	} break;

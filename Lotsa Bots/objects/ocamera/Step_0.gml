@@ -21,10 +21,11 @@ if ( mouse_check_button(mb_middle) )
 else
 {
 	// Set target camera position
-	var targetX, targetY;
-	
-	targetX = target.x - round(camW / 2);
-	targetY = target.y - round(camH / 2);
+	if ( instance_exists( target ) )
+	{
+		targetX = target.x - round(camW / 2);
+		targetY = target.y - round(camH / 2);
+	}
 	
 	
 	// Set camera position

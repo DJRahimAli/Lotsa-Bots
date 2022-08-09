@@ -56,5 +56,5 @@ function HTML_FS_Step()
 		HTML_FS_canvas_aspect_ratio(base_size, browser_width, browser_height);
 	}
 	
-	if (keyboard_check_pressed(ord("F"))) { HTML_FS_canvas_fullscreen(); }
+	if (keyboard_check_pressed(ord("1"))) { HTML_FS_canvas_fullscreen(); }
 }

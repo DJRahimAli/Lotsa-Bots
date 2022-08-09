@@ -1,8 +1,16 @@
-flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtract );
+if ( oPlayer.hp == 0 ) instance_destroy( oPlayer );
+
+if ( flashColorCurrent == flashColorSpawn ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractSpawn );
+
+if ( flashColorCurrent == flashColorHurt ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractHurt );
 
 if (hp != hpLast)
 {
-	if (hp < hpLast) flashAlphaCurrent = flashAlpha;
+	if (hp < hpLast)
+	{
+		flashAlphaCurrent = flashAlphaHurt;
+		flashColorCurrent = flashColorHurt;
+	}
 	hpLast = hp;
 }
 
@@ -93,8 +101,7 @@ else
 	
 	vDir = ( Input*sign(oAnalogueLeft.vDir) );
 }
-	show_debug_message(hDir)
-	show_debug_message(vDir)
+
 
 if ( vDir == 0 )
 {
@@ -142,23 +149,26 @@ vspFraction = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vspFraction;
 
 
-if ( keyNoclip ) noclip = !noclip;
-
+if ( keyNoclip )
+{
+	game_restart()
+	noclip = !noclip;
+}
 if ( !noclip )
 {
 	//Horizontal Collision
-	if ( tile_meeting( round( x ) + ceil_signed( hsp ), round( y ), "Collision" ) )
+	if ( place_meeting( round( x ) + ceil_signed( hsp ), round( y ), oCollision ) )
 	{
-		while( !tile_meeting( x + sign( hsp ), y, "Collision") ) x += sign( hsp );
+		while( !place_meeting( x + sign( hsp ), y, oCollision) ) x += sign( hsp );
 		hspPlayer = 0;
 		hsp = 0;
 	}
 	x += hsp;
 	
 	//Vertical Collision
-	if ( tile_meeting( round( x ), round( y ) + ceil_signed( vsp ), "Collision" ) )
+	if ( place_meeting( round( x ), round( y ) + ceil_signed( vsp ), oCollision ) )
 	{
-		while( !tile_meeting(x, y + sign( vsp ), "Collision" ) ) y += sign( vsp );
+		while( !place_meeting(x, y + sign( vsp ), oCollision ) ) y += sign( vsp );
 		vspPlayer = 0;
 		vsp = 0;
 	}
@@ -199,7 +209,7 @@ switch (weaponStateCurrent)
 			
 			repeat(weapon[weaponCurrent][weaponvars.amount])
 			{
-				with ( instance_create_layer( x, y, "Instances", oHurtbox ) ) 
+				with ( instance_create_layer( x, y, "Layer1", oHurtbox ) ) 
 				{
 					sprite_index = array[weaponvars.sprite];
 					timer  = array[weaponvars.timer];

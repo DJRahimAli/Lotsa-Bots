@@ -1,9 +1,9 @@
 // Resolution
-#macro RES_W 540
-#macro RES_H 960
+#macro RES_W 960
+#macro RES_H 540
 
-#macro CAM_RES_W 540
-#macro CAM_RES_H 960
+#macro CAM_RES_W 960
+#macro CAM_RES_H 540
 #macro CAM_SMOOTH -1
 
 // Enable views
@@ -20,8 +20,15 @@ view_set_camera(0, camera);
 // Set target object
 target = oPlayer;
 
-//Set camera position to the target position
-camera_set_view_pos(camera, target.x, target.y);
+if ( instance_exists( target ) )
+{
+	targetX = target.x;
+	targetY = target.y;
+	
+	//Set camera position to the target position
+	camera_set_view_pos(camera, targetX, targetY);
+}
+
 
 // Resize window & application surface
 window_set_size(RES_W, RES_H);

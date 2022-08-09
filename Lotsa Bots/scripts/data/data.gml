@@ -1,8 +1,8 @@
 function WeaponData()
 {
-	weapon[weapons.unarmed] = [ sMissing, 50, 1, 10, 80, 0,  8, false,   0 ];
-	weapon[weapons.smg]		= [ sMissing, 10, 1, 30,  0,  20, 3, true,   5 ];
-	weapon[weapons.shotgun] = [ sMissing, 20, 3, 20,  0,  20, 2, true,  15 ];
+	weapon[weapons.unarmed] = [ sMissing, 50, 1, 10, 80, 0,  8, false, 0  ];
+	weapon[weapons.smg]		= [ sBullet, 5,  1, 30, 0,  20, 5, true,  5  ];
+	weapon[weapons.shotgun] = [ sBullet, 20, 3, 20, 0,  20, 2, true,  15 ];
 }
 
 
@@ -21,6 +21,11 @@ function WeaponSpriteData()
 
 function WaveData()
 {
-	waveData[wave.one] = [ 5, 60 ];
-	waveEnemies = [oEnemySaw];
+	waveData[arena.white][wave.one]   = [ 240, 5 ];
+	waveData[arena.white][wave.two]   = [ 180, 10 ];
+	waveData[arena.white][wave.three] = [ 120, 20 ];
+	
+	waveEnemies[arena.white][wave.one]   = [ oEnemySaw ];
+	waveEnemies[arena.white][wave.two]   = [ oEnemySaw ];
+	waveEnemies[arena.white][wave.three] = [ oEnemySaw ];
 }
