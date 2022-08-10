@@ -1,3 +1,6 @@
+image_speed = 0;
+image_index = 0;
+
 #region Directional Sprite Code
 for (var i = 0; i < character.size; i++)
 {

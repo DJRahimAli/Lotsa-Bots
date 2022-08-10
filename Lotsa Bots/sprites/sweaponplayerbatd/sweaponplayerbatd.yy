@@ -26,7 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"03d7ae02-e35e-4089-ba27-5e51e98d315b","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"03d7ae02-e35e-4089-ba27-5e51e98d315b","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"LayerId":{"name":"38f7be6f-c55c-4423-b3d4-780ce168d391","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"03d7ae02-e35e-4089-ba27-5e51e98d315b","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"LayerId":{"name":"aae9b84e-fafd-4b15-9524-610de2db2e33","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"03d7ae02-e35e-4089-ba27-5e51e98d315b","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"LayerId":{"name":"0fabb19c-0c6a-41ac-8a2c-d94138e5d032","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sWeaponPlayerBatD","path":"sprites/sWeaponPlayerBatD/sWeaponPlayerBatD.yy",},"resourceVersion":"1.0","name":"03d7ae02-e35e-4089-ba27-5e51e98d315b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -67,7 +67,7 @@
   },
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"38f7be6f-c55c-4423-b3d4-780ce168d391","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"aae9b84e-fafd-4b15-9524-610de2db2e33","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"0fabb19c-0c6a-41ac-8a2c-d94138e5d032","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

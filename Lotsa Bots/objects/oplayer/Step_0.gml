@@ -1,5 +1,3 @@
-if ( oPlayer.hp == 0 ) instance_destroy( oPlayer );
-
 if ( flashColorCurrent == flashColorSpawn ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractSpawn );
 
 if ( flashColorCurrent == flashColorHurt ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractHurt );
@@ -149,11 +147,8 @@ vspFraction = vsp - (floor(abs(vsp)) * sign(vsp));
 vsp -= vspFraction;
 
 
-if ( keyNoclip )
-{
-	game_restart()
-	noclip = !noclip;
-}
+if ( keyNoclip ) noclip = !noclip;
+
 if ( !noclip )
 {
 	//Horizontal Collision
@@ -207,6 +202,8 @@ switch (weaponStateCurrent)
 			
 			firstShot = false;
 			
+			oWeapon.image_speed = 1;
+			
 			repeat(weapon[weaponCurrent][weaponvars.amount])
 			{
 				with ( instance_create_layer( x, y, "Layer1", oHurtbox ) ) 
@@ -237,6 +234,9 @@ switch (weaponStateCurrent)
 		{
 			firstShot = true;
 			
+			oWeapon.image_speed = 0;
+			oWeapon.image_index = 0;
+			
 			if ( hsp != 0 || vsp != 0 )
 			{
 				pDir = point_direction(0, 0, sign(hsp), sign(vsp) );
@@ -255,6 +255,9 @@ switch (weaponStateCurrent)
 		direction += Diff * angleAimDelay;
 		
 		
+		oWeapon.image_speed = 1;
+		
+		
 		cooldown = max( 0, cooldown-1 );
 		
 		if ( cooldown == 0 ) weaponStateCurrent = weaponstate.idle;
@@ -265,3 +268,6 @@ switch (weaponStateCurrent)
 angle = ( round(direction / angleInterval) ) mod directions;
 
 if ( spriteData[characterCurrent][angle][playersprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
+
+
+if ( oPlayer.hp == 0 ) instance_destroy( oPlayer );
