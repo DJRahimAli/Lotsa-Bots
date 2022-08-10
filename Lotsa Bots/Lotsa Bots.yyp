@@ -50,6 +50,7 @@
     {"id":{"name":"sWallVariations","path":"sprites/sWallVariations/sWallVariations.yy",},"order":15,},
     {"id":{"name":"sWeaponPlayerBatDR","path":"sprites/sWeaponPlayerBatDR/sWeaponPlayerBatDR.yy",},"order":4,},
     {"id":{"name":"wall_escape","path":"scripts/wall_escape/wall_escape.yy",},"order":3,},
+    {"id":{"name":"rBlueArena","path":"rooms/rBlueArena/rBlueArena.yy",},"order":1,},
     {"id":{"name":"sWeaponPlayerBatR","path":"sprites/sWeaponPlayerBatR/sWeaponPlayerBatR.yy",},"order":0,},
     {"id":{"name":"sSpawnerPlayer","path":"sprites/sSpawnerPlayer/sSpawnerPlayer.yy",},"order":11,},
     {"id":{"name":"oAnalogueLeft","path":"objects/oAnalogueLeft/oAnalogueLeft.yy",},"order":6,},
@@ -67,7 +68,7 @@
     {"id":{"name":"sBulletEnemy","path":"sprites/sBulletEnemy/sBulletEnemy.yy",},"order":17,},
     {"id":{"name":"sArrowdl","path":"sprites/sArrowdl/sArrowdl.yy",},"order":5,},
     {"id":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},"order":1,},
-    {"id":{"name":"rArena","path":"rooms/rArena/rArena.yy",},"order":0,},
+    {"id":{"name":"rWhiteArena","path":"rooms/rWhiteArena/rWhiteArena.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Android","path":"options/android/options_android.yy",},
@@ -88,7 +89,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rArena","path":"rooms/rArena/rArena.yy",},},
+    {"roomId":{"name":"rWhiteArena","path":"rooms/rWhiteArena/rWhiteArena.yy",},},
+    {"roomId":{"name":"rBlueArena","path":"rooms/rBlueArena/rBlueArena.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
   ],
   "Folders": [
@@ -116,6 +118,7 @@
     {"folderPath":"folders/Sprites/Entities/Player/Weapons/Spiked Bat.yy","order":0,"resourceVersion":"1.0","name":"Spiked Bat","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Entities/Player/Weapons/Submachine Gun.yy","order":2,"resourceVersion":"1.0","name":"Submachine Gun","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Entities/Player/Weapons/Pump action Shotgun.yy","order":1,"resourceVersion":"1.0","name":"Pump action Shotgun","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Rooms/Arenas.yy","order":4,"resourceVersion":"1.0","name":"Arenas","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
