@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sCol",
-    "path": "sprites/sCol/sCol.yy",
+    "name": "sBrick",
+    "path": "sprites/sBrick/sBrick.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -29,7 +29,7 @@
     "path": "folders/Objects/Collision.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCollision",
+  "name": "oBrick",
   "tags": [],
   "resourceType": "GMObject",
 }

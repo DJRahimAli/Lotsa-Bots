@@ -1,14 +1,17 @@
 {
   "spriteId": {
-    "name": "sCol",
-    "path": "sprites/sCol/sCol.yy",
+    "name": "sBlock",
+    "path": "sprites/sBlock/sBlock.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oCollision",
+    "path": "objects/oCollision/oCollision.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -29,7 +32,7 @@
     "path": "folders/Objects/Collision.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCollision",
+  "name": "oBlock",
   "tags": [],
   "resourceType": "GMObject",
 }
