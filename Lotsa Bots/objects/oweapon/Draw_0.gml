@@ -1,4 +1,4 @@
-var array = spriteData[oPlayer.characterCurrent][oPlayer.weaponCurrent][oPlayer.weaponStateCurrent][oPlayer.angle];
+var array = spriteData[oPlayer.characterCurrent][oPlayer.weaponCurrent][oPlayer.angle];
 
 sprite_index = array[sprite.index];
 
