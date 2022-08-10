@@ -211,14 +211,23 @@ switch (weaponStateCurrent)
 			{
 				with ( instance_create_layer( x, y, "Layer1", oHurtbox ) ) 
 				{
-					sprite_index = array[weaponvars.sprite];
 					timer  = array[weaponvars.timer];
 					length = array[weaponvars.length];
 					spd	   = array[weaponvars.spd];
 					damage = array[weaponvars.damage];
 					bullet = array[weaponvars.bullet];
-					var spread = array[weaponvars.spread];
-					dir = round(other.direction + random_range(-spread, spread));
+					var spreadmin = array[weaponvars.spreadmin];
+					var spreadmax = array[weaponvars.spreadmax];
+					var spread = irandom_range(-spreadmax, spreadmax);
+					var spreadfinal = clamp( abs(spread), spreadmin, spreadmax );
+					dir = round(other.direction + spreadfinal*sign(spread));
+					sprite_index = array[weaponvars.sprite];
+					mask_index = array[weaponvars.mask];
+					image_xscale = array[weaponvars.xscale];
+					image_yscale = array[weaponvars.yscale];
+					image_angle = array[weaponvars.rot];
+					image_blend = array[weaponvars.col];
+					image_alpha = array[weaponvars.alpha];
 				}
 			}
 			
@@ -255,4 +264,4 @@ switch (weaponStateCurrent)
 
 angle = ( round(direction / angleInterval) ) mod directions;
 
-if ( spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle][sprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
+if ( spriteData[characterCurrent][angle][playersprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;

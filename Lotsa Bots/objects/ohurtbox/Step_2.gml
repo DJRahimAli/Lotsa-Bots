@@ -15,7 +15,7 @@ else
 round_position();
 
 
-depth = oPlayer.depth + sign(oPlayer.y+8 - y);
+depth = oPlayer.depth + 2*sign(oPlayer.y+8 - y);
 
 
 timer = max( 0, timer-1 );

@@ -6,7 +6,7 @@ if ( cooldownCurrent != 0 )
 }
 else
 {
-	if ( instance_number(oParEnemy) != enemyAmountCurrent || enemyAmountCurrent == -1 )
+	if ( instance_number(oParEnemy) != enemyAmountCurrent )
 	{
 		with( instance_find(oSpawnerWave, irandom_range( 0, instance_number(oSpawnerWave)) ) )
 		{

@@ -80,7 +80,7 @@ noclip = false;
 cooldown = 0;
 firstShot = false;
 WeaponData();
-weaponCurrent = weapons.smg;
+weaponCurrent = weapons.unarmed;
 #endregion
 
 
@@ -107,37 +107,27 @@ weaponStateCurrent = weaponstate.idle;
 
 for (var i = 0; i < character.size; i++)
 {
-	for (var j = 0; j < weapons.size; j++)
+	for (var j = 0; j < directions; j++)
 	{
-		for (var k = 0; k < weaponstate.size; k++)
-		{
-			for (var l = 0; l < directions; l++)
-			{
-				spriteData[i][j][k][l] = [-3, 1, 1, 0, c_white, 1];
-			}
-		}
+		spriteData[i][j] = [-3, -3, 1, 1, 0, c_white, 1];
 	}
 }
 
 
-WeaponSpriteData();
+PlayerSpriteData();
 
 
-defaultarray = spriteData[0][0][0][0];
+defaultarray = spriteData[0][0];
 
 for (var i = 0; i < character.size; i++)
 {
-	for (var j = 0; j < weapons.size; j++)
+	while( array_length(spriteData[i]) < directions ) array_push(spriteData[i], [-3, -3, 1, 1, 0, c_white, 1]);
+	
+	for (var j = 0; j < directions; j++)
 	{
-		for (var k = 0; k < weaponstate.size; k++)
-		{
-			while( array_length(spriteData[i][j][k]) < directions ) array_push(spriteData[i][j][k], [-3, 1, 1, 0, c_white, 1]);
-		
-			for (var l = 0; l < directions; l++)
-			{
-				while( array_length(spriteData[i][j][k][l]) < array_length(defaultarray) ) array_push(spriteData[i][j][k][l], defaultarray[array_length(spriteData[i][j][k][l])]);
-			}
-		}
+		while( array_length(spriteData[i][j]) < array_length(defaultarray) ) array_push(spriteData[i][j], defaultarray[array_length(spriteData[i][j])]);
 	}
 }
 #endregion
+
+instance_create_depth( 0, 0, depth-1, oWeapon );

@@ -35,9 +35,20 @@ function EnumInit()
 		size
 	}
 	
+	enum playersprite
+	{
+		index,
+		mask,
+		xscale,
+		yscale,
+		rot,
+		col,
+		alpha,
+		size
+	}
+	
 	enum weaponvars
 	{
-		sprite,
 		cooldown,
 		amount,
 		timer,
@@ -45,7 +56,15 @@ function EnumInit()
 		spd,
 		damage,
 		bullet,
-		spread,
+		spreadmin,
+		spreadmax,
+		sprite,
+		mask,
+		xscale,
+		yscale,
+		rot,
+		col,
+		alpha,
 		size
 	}
 	

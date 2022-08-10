@@ -1,19 +1,24 @@
-var array = spriteData[characterCurrent][weaponCurrent][weaponStateCurrent][angle];
+var array = spriteData[characterCurrent][angle];
 
-sprite_index = array[sprite.index];
+sprite_index = array[playersprite.index];
 
-image_xscale = array[sprite.xscale];
-image_yscale = array[sprite.yscale];
+mask_index = array[playersprite.mask];
 
-image_angle = array[sprite.rot];
+image_xscale = array[playersprite.xscale];
+image_yscale = array[playersprite.yscale];
 
-image_blend = array[sprite.col];
+image_angle = array[playersprite.rot];
 
-image_alpha = array[sprite.alpha];
+image_blend = array[playersprite.col];
 
-mask_index = sPlayerD;
+image_alpha = array[playersprite.alpha];
+
 
 if ( sprite_index <= -3 ) sprite_index = sMissing;
+
+if ( mask_index <= -3 ) mask_index = sMissing;
+
+if ( mask_index == -2 ) mask_index = sprite_index;
 
 if ( sprite_index != -1 ) draw_self();
 
