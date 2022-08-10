@@ -16,12 +16,16 @@ else
 	cooldownCurrent = waveData[arenaCurrent][waveCurrent][wavevars.cooldown];
 }
 
-if ( waveCurrent != wave.three && enemyAmountCurrent == 0)
+if ( enemyAmountCurrent == 0 )
 {
-	waveCurrent++;
-	enemyAmountCurrent = waveData[arenaCurrent][waveCurrent][wavevars.enemyamount];
-	cooldownCurrent = 0;
-	show_debug_message( "set to next wave and set enemyamount and cooldown" )
+	if ( waveCurrent != wave.three )
+	{
+		waveCurrent++;
+		enemyAmountCurrent = waveData[arenaCurrent][waveCurrent][wavevars.enemyamount];
+		cooldownCurrent = 0;
+		show_debug_message( "set to next wave and set enemyamount and cooldown" )
+	}
+	else room_goto_next();
 }
 
 show_debug_message(waveCurrent)

@@ -5,17 +5,20 @@ if ( bullet )
 }
 else
 {
-	x = oPlayer.x;
-	y = oPlayer.y;
-	
-	x += lengthdir_x(length, round(oPlayer.direction));
-	y += lengthdir_y(length, round(oPlayer.direction));
+	if ( instance_exists(oPlayer) )
+	{
+		x = oPlayer.x;
+		y = oPlayer.y;
+		
+		x += lengthdir_x(length, round(oPlayer.direction));
+		y += lengthdir_y(length, round(oPlayer.direction));
+	}
 }
 
 round_position();
 
 
-depth = oPlayer.depth + 2*sign(oPlayer.y+8 - y);
+if ( instance_exists(oPlayer) ) depth = oPlayer.depth + 2*sign(oPlayer.y+8 - y);
 
 
 timer = max( 0, timer-1 );
