@@ -86,6 +86,7 @@ angleInterval = ( 360 / directions );
 //directions = 8;
 
 characterCurrent = character.player;
+playerStateCurrent = playerstate.idle;
 weaponStateCurrent = weaponstate.idle;
 
 

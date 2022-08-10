@@ -17,6 +17,14 @@ function EnumInit()
 		size
 	}
 	
+	enum playerstate
+	{
+		idle,
+		dead,
+		win,
+		size
+	}
+	
 	enum weaponstate
 	{
 		idle,
