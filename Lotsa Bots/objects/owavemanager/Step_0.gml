@@ -27,5 +27,3 @@ if ( enemyAmountCurrent == 0 )
 	}
 	else room_goto_next();
 }
-
-show_debug_message(waveCurrent)
