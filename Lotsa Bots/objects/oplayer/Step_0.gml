@@ -268,7 +268,7 @@ if ( playerStateCurrent == playerstate.idle )
 		{
 			playerStateCurrent = playerstate.dead;
 			instance_destroy(oWeapon);
-			layer_sequence_destroy(sequenceControls);
+			if ( global.mobileControls ) layer_sequence_destroy(sequenceControls);
 			hpLast = 0;
 		}
 		if (hp < hpLast)
