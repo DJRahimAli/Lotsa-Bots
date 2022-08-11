@@ -103,9 +103,9 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
-    {"roomId":{"name":"rRedArena","path":"rooms/rRedArena/rRedArena.yy",},},
-    {"roomId":{"name":"rBlueArena","path":"rooms/rBlueArena/rBlueArena.yy",},},
     {"roomId":{"name":"rWhiteArena","path":"rooms/rWhiteArena/rWhiteArena.yy",},},
+    {"roomId":{"name":"rBlueArena","path":"rooms/rBlueArena/rBlueArena.yy",},},
+    {"roomId":{"name":"rRedArena","path":"rooms/rRedArena/rRedArena.yy",},},
     {"roomId":{"name":"rTitle","path":"rooms/rTitle/rTitle.yy",},},
   ],
   "Folders": [
