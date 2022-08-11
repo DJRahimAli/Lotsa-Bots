@@ -1,4 +1,4 @@
-var array = spriteData[characterCurrent][angle];
+var array = spriteData[characterCurrent][playerStateCurrent][angle];
 
 sprite_index = array[playersprite.index];
 

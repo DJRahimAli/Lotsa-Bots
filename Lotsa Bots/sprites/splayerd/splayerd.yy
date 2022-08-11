@@ -97,8 +97,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Player",
-    "path": "folders/Sprites/Entities/Player.yy",
+    "name": "Idle",
+    "path": "folders/Sprites/Entities/Player/Idle.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerD",

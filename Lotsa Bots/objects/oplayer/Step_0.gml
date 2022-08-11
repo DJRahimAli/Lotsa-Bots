@@ -1,25 +1,5 @@
 if ( playerStateCurrent == playerstate.idle )
 {
-	if ( flashColorCurrent == flashColorSpawn ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractSpawn );
-
-	if ( flashColorCurrent == flashColorHurt ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractHurt );
-
-	if (hp != hpLast)
-	{
-		if ( hp == 0 )
-		{
-			direction = 270;
-			playerStateCurrent = playerstate.dead;
-			hpLast = 0;
-		}
-		if (hp < hpLast)
-		{
-			flashAlphaCurrent = flashAlphaHurt;
-			flashColorCurrent = flashColorHurt;
-		}
-		hpLast = hp;
-	}
-
 	#region Controls
 	keyLeft = keyboard_check(ord("A"));
 	keyRight = keyboard_check(ord("D"));
@@ -275,10 +255,28 @@ if ( playerStateCurrent == playerstate.idle )
 
 	angle = ( round(direction / angleInterval) ) mod directions;
 
-	if ( spriteData[characterCurrent][angle][playersprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
+	if ( spriteData[characterCurrent][playerStateCurrent][angle][playersprite.index] != -2 ) anglePrevious = angle; else angle = anglePrevious;
 
 
-	//if ( oPlayer.hp == 0 ) instance_destroy( oPlayer );
+	if ( flashColorCurrent == flashColorSpawn ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractSpawn );
+
+	if ( flashColorCurrent == flashColorHurt ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractHurt );
+
+	if (hp != hpLast)
+	{
+		if ( hp == 0 )
+		{
+			playerStateCurrent = playerstate.dead;
+			instance_destroy(oWeapon);
+			hpLast = 0;
+		}
+		if (hp < hpLast)
+		{
+			flashAlphaCurrent = flashAlphaHurt;
+			flashColorCurrent = flashColorHurt;
+		}
+		hpLast = hp;
+	}
 }
 
 

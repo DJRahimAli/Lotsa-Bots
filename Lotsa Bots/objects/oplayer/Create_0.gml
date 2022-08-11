@@ -92,9 +92,12 @@ weaponStateCurrent = weaponstate.idle;
 
 for (var i = 0; i < character.size; i++)
 {
-	for (var j = 0; j < directions; j++)
+	for (var j = 0; j < playerstate.size; j++)
 	{
-		spriteData[i][j] = [-3, -3, 1, 1, 0, c_white, 1];
+		for (var k = 0; k < directions; k++)
+		{
+			spriteData[i][j][k] = [-3, -3, 1, 1, 0, c_white, 1];
+		}
 	}
 }
 
@@ -102,15 +105,18 @@ for (var i = 0; i < character.size; i++)
 PlayerSpriteData();
 
 
-defaultarray = spriteData[0][0];
+defaultarray = spriteData[0][0][0];
 
 for (var i = 0; i < character.size; i++)
 {
-	while( array_length(spriteData[i]) < directions ) array_push(spriteData[i], [-3, -3, 1, 1, 0, c_white, 1]);
-	
-	for (var j = 0; j < directions; j++)
+	for (var j = 0; j < playerstate.size; j++)
 	{
-		while( array_length(spriteData[i][j]) < array_length(defaultarray) ) array_push(spriteData[i][j], defaultarray[array_length(spriteData[i][j])]);
+		while( array_length(spriteData[i][j]) < directions ) array_push(spriteData[i][j], [-3, -3, 1, 1, 0, c_white, 1]);
+		
+		for (var k = 0; k < directions; k++)
+		{
+			while( array_length(spriteData[i][j][k]) < array_length(defaultarray) ) array_push(spriteData[i][j][k], defaultarray[array_length(spriteData[i][j][k])]);
+		}
 	}
 }
 #endregion
