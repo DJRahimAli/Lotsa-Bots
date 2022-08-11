@@ -19,7 +19,7 @@ function WeaponSpriteData()
 {
 	spriteData[character.player][weapons.unarmed] = [ [sWeaponPlayerBatR], [sWeaponPlayerBatUR], [sWeaponPlayerBatU], [sWeaponPlayerBatUR, -1], [sWeaponPlayerBatR, -1], [sWeaponPlayerBatDR, -1], [sWeaponPlayerBatD], [sWeaponPlayerBatDR] ];
 	
-	spriteData[character.player][weapons.smg]     = [ [sWeaponPlayerBatR], [sWeaponPlayerBatUR], [sWeaponPlayerBatU], [sWeaponPlayerBatUR, -1], [sWeaponPlayerBatR, -1], [sWeaponPlayerBatDR, -1], [sWeaponPlayerBatD], [sWeaponPlayerBatDR] ];
+	spriteData[character.player][weapons.smg]     = [ [sWeaponPlayerSMGR], [sWeaponPlayerSMGUR], [sWeaponPlayerSMGU], [sWeaponPlayerSMGUR, -1], [sWeaponPlayerSMGR, -1], [sWeaponPlayerSMGDR, -1], [sWeaponPlayerSMGD], [sWeaponPlayerSMGDR] ];
 	
 	spriteData[character.player][weapons.shotgun] = [ [sPlayerR, 1, 1], [sPlayerUR, 1, 1], [sPlayerU, 1, 1], [sPlayerUR, -1, 1], [sPlayerR, -1, 1], [sPlayerDR, -1, 1], [sPlayerD, 1, 1], [sPlayerDR, 1, 1] ];
 }
