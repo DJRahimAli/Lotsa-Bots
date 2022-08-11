@@ -1,8 +1,8 @@
 function WeaponData()
 {
-	weapon[weapons.unarmed] = [ 30, 1, 10, 100, 0,  12, false, 0, 0,  sMissing,	   sMissing, 1, 1, 0, c_white, 1  ];
-	weapon[weapons.smg]		= [ 5,  1, 30, 0,   20, 5,  true,  0, 5,  sBullet, sBullet,  1, 1, 0, c_white, 1 ];
-	weapon[weapons.shotgun] = [ 50, 3, 20, 0,   20, 8,  true,  2, 15, sBullet, sBullet,  1, 1, 0, c_white, 1 ];
+	weapon[weapons.unarmed] = [ 30, 1, 10, 132, 0,  12, false, 0, 0,  sMissing, sBullet, 1, 1, 0, c_white, 1  ];
+	weapon[weapons.smg]		= [ 5,  1, 30, 0,   20, 5,  true,  0, 5,  sBullet,  sBullet,  1, 1, 0, c_white, 1 ];
+	weapon[weapons.shotgun] = [ 50, 3, 20, 0,   20, 8,  true,  2, 15, sBullet,  sBullet,  1, 1, 0, c_white, 1 ];
 }
 
 function PlayerSpriteData()
