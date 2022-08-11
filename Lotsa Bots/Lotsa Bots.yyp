@@ -29,6 +29,7 @@
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":14,},
     {"id":{"name":"sWeaponPlayerBatUR","path":"sprites/sWeaponPlayerBatUR/sWeaponPlayerBatUR.yy",},"order":3,},
     {"id":{"name":"sPlayerR","path":"sprites/sPlayerR/sPlayerR.yy",},"order":2,},
+    {"id":{"name":"sndPlayerHit","path":"sounds/sndPlayerHit/sndPlayerHit.yy",},"order":0,},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},"order":0,},
     {"id":{"name":"oAnalogueRight","path":"objects/oAnalogueRight/oAnalogueRight.yy",},"order":7,},
     {"id":{"name":"oWeapon","path":"objects/oWeapon/oWeapon.yy",},"order":2,},
