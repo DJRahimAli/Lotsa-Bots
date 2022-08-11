@@ -60,11 +60,14 @@ noclip = false;
 #endregion
 
 
+playerStateCurrent = playerstate.idle;
+
+
 #region Weapon
 cooldown = 0;
 firstShot = false;
 WeaponData();
-weaponCurrent = weapons.unarmed;
+weaponCurrent = weapons.smg;
 #endregion
 
 
@@ -86,7 +89,6 @@ angleInterval = ( 360 / directions );
 //directions = 8;
 
 characterCurrent = character.player;
-playerStateCurrent = playerstate.idle;
 weaponStateCurrent = weaponstate.idle;
 
 

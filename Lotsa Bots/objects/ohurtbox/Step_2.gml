@@ -21,8 +21,8 @@ round_position();
 if ( instance_exists(oPlayer) ) depth = oPlayer.depth + 2*sign(oPlayer.y+8 - y);
 
 
-timer = max( 0, timer-1 );
+if ( timer >= 0 ) timer = max( 0, timer-1 );
 
-if ( timer <= 0 
+if ( timer == 0
 || place_meeting(x, y, oCollision)
 ) instance_destroy();

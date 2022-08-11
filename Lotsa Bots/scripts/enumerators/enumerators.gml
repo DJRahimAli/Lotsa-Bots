@@ -97,6 +97,7 @@ function EnumInit()
 	{
 		cooldown,
 		enemyamount,
+		intermission,
 		size
 	}
 }

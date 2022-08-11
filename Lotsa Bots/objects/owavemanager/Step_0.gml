@@ -18,12 +18,30 @@ else
 
 if ( enemyAmountCurrent == 0 )
 {
-	if ( waveCurrent != wave.three )
+	intermissionCurrent = max( 0, intermissionCurrent-1 );
+	
+	if ( intermissionCurrent == 0 )
 	{
-		waveCurrent++;
-		enemyAmountCurrent = waveData[arenaCurrent][waveCurrent][wavevars.enemyamount];
-		cooldownCurrent = 0;
-		show_debug_message( "set to next wave and set enemyamount and cooldown" )
+		if ( waveCurrent != wave.three )
+		{
+			waveCurrent++;
+			enemyAmountCurrent = waveData[arenaCurrent][waveCurrent][wavevars.enemyamount];
+			cooldownCurrent = 0;
+			intermissionCurrent = waveData[arenaCurrent][waveCurrent][wavevars.intermission];
+			show_debug_message( "set to next wave and set enemyamount and cooldown" );
+		}
+		else room_goto_next();
 	}
-	else room_goto_next();
+	else
+	{
+		if ( waveCurrent != wave.three )
+		{
+			show_debug_message( "show next wave number on screen" );
+		}
+		else
+		{
+			oPlayer.playerStateCurrent = playerstate.win;
+			show_debug_message( "set player to win playerstate" );
+		}
+	}
 }
