@@ -5,3 +5,5 @@ for (var i = 0; i < variations; i++)
 		variation = irandom_range( 0, other.image_number );
 	}
 }
+
+instance_destroy();
