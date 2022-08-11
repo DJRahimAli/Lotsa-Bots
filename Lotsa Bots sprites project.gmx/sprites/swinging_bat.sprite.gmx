@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>38</bbox_left>
-  <bbox_right>155</bbox_right>
+  <bbox_left>86</bbox_left>
+  <bbox_right>203</bbox_right>
   <bbox_top>67</bbox_top>
   <bbox_bottom>220</bbox_bottom>
   <HTile>0</HTile>
@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>192</width>
+  <width>288</width>
   <height>288</height>
   <frames>
     <frame index="0">images\swinging_bat_0.png</frame>
@@ -31,5 +31,7 @@
     <frame index="8">images\swinging_bat_8.png</frame>
     <frame index="9">images\swinging_bat_9.png</frame>
     <frame index="10">images\swinging_bat_10.png</frame>
+    <frame index="11">images\swinging_bat_11.png</frame>
+    <frame index="12">images\swinging_bat_12.png</frame>
   </frames>
 </sprite>
