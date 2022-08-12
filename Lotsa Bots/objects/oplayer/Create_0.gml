@@ -1,5 +1,6 @@
 hp = 100;
-hpLast = hp;
+hpCurrent = hp;
+hpLast = hpCurrent;
 
 respawnCooldown = 120;
 respawnCooldownCurrent = respawnCooldown;
@@ -71,7 +72,7 @@ playerStateCurrent = playerstate.idle;
 cooldown = 0;
 firstShot = false;
 WeaponData();
-weaponCurrent = weapons.smg;
+weaponCurrent = weapons.unarmed;
 #endregion
 
 

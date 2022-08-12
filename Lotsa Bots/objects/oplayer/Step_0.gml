@@ -262,9 +262,9 @@ if ( playerStateCurrent == playerstate.idle )
 
 	if ( flashColorCurrent == flashColorHurt ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractHurt );
 
-	if (hp != hpLast)
+	if (hpCurrent != hpLast)
 	{
-		if ( hp == 0 )
+		if ( hpCurrent == 0 )
 		{
 			playerStateCurrent = playerstate.dead;
 			image_speed = 1;
@@ -272,13 +272,13 @@ if ( playerStateCurrent == playerstate.idle )
 			if ( global.mobileControls ) layer_sequence_destroy(sequenceControls);
 			hpLast = 0;
 		}
-		if (hp < hpLast)
+		if (hpCurrent < hpLast)
 		{
 			if ( !audio_is_playing(sndPlayerHit) ) audio_play_sound( sndPlayerHit, 5, false );
 			flashAlphaCurrent = flashAlphaHurt;
 			flashColorCurrent = flashColorHurt;
 		}
-		hpLast = hp;
+		hpLast = hpCurrent;
 	}
 }
 
