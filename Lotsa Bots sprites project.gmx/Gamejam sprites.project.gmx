@@ -33,6 +33,9 @@
     </sprites>
     <sprites name="robot enemies">
       <sprite>sprites\big_robot</sprite>
+      <sprite>sprites\big_robot_bat</sprite>
+      <sprite>sprites\big_robot_smg</sprite>
+      <sprite>sprites\big_robot_shotgun</sprite>
       <sprite>sprites\big_robot_bat_swing_up</sprite>
       <sprite>sprites\big_robot_bat_swing_up_right</sprite>
       <sprite>sprites\big_robot_bat_swing_right</sprite>

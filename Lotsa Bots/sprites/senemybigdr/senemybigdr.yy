@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Big Robot Enemy",
-    "path": "folders/Sprites/Entities/Big Robot Enemy.yy",
+    "name": "Big Robot No Weapon",
+    "path": "folders/Sprites/Entities/Big Robot Enemy/Big Robot No Weapon.yy",
   },
   "resourceVersion": "1.0",
   "name": "sEnemyBigDR",
