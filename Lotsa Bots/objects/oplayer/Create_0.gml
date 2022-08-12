@@ -1,3 +1,5 @@
+audio_play_sound( sndPlayerSpawn, 5, false );
+
 hp = 100;
 hpCurrent = hp;
 hpLast = hpCurrent;

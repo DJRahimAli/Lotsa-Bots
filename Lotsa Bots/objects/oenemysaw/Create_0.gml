@@ -1,3 +1,5 @@
+audio_play_sound( sndEnemySpawn, 4, false );
+
 hp = 20;
 hpCurrent = hp;
 hpLast = hpCurrent;

@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"sArrowr","path":"sprites/sArrowr/sArrowr.yy",},"order":0,},
     {"id":{"name":"sPause","path":"sprites/sPause/sPause.yy",},"order":25,},
+    {"id":{"name":"sndPlayerSpawn","path":"sounds/sndPlayerSpawn/sndPlayerSpawn.yy",},"order":4,},
     {"id":{"name":"oSpawnerPlayer","path":"objects/oSpawnerPlayer/oSpawnerPlayer.yy",},"order":9,},
     {"id":{"name":"sPlayerSwingR","path":"sprites/sPlayerSwingR/sPlayerSwingR.yy",},"order":2,},
     {"id":{"name":"sWeaponPlayerShootSMGD","path":"sprites/sWeaponPlayerShootSMGD/sWeaponPlayerShootSMGD.yy",},"order":0,},
@@ -100,6 +101,7 @@
     {"id":{"name":"wall_escape","path":"scripts/wall_escape/wall_escape.yy",},"order":3,},
     {"id":{"name":"sFullscreen","path":"sprites/sFullscreen/sFullscreen.yy",},"order":28,},
     {"id":{"name":"musWave1","path":"sounds/musWave1/musWave1.yy",},"order":1,},
+    {"id":{"name":"sndEnemySpawn","path":"sounds/sndEnemySpawn/sndEnemySpawn.yy",},"order":5,},
     {"id":{"name":"rBlueArena","path":"rooms/rBlueArena/rBlueArena.yy",},"order":1,},
     {"id":{"name":"sWeaponPlayerBatR","path":"sprites/sWeaponPlayerBatR/sWeaponPlayerBatR.yy",},"order":0,},
     {"id":{"name":"sBlock","path":"sprites/sBlock/sBlock.yy",},"order":18,},
