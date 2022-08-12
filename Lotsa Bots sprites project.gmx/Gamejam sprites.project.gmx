@@ -79,9 +79,14 @@
     <sprite>sprites\play_button</sprite>
     <sprite>sprites\logo_gradient</sprite>
     <sprite>sprites\pause_button</sprite>
+    <sprite>sprites\fullscreen_button</sprite>
+    <sprite>sprites\numbers_template</sprite>
     <sprite>sprites\numbers</sprite>
     <sprite>sprites\wave_text_template</sprite>
+    <sprite>sprites\arena_text_template</sprite>
     <sprite>sprites\wave_text</sprite>
+    <sprite>sprites\sprite65</sprite>
+    <sprite>sprites\sprite67</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
