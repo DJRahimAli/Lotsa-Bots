@@ -103,7 +103,8 @@ function EnumInit()
 	
 	enum pickup
 	{
-		health,
+		medkitsmall,
+		medkit,
 		unarmed,
 		smg,
 		shotgun,
