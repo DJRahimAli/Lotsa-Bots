@@ -76,6 +76,10 @@
       <sprite>sprites\sprite36</sprite>
       <sprite>sprites\sprite40</sprite>
     </sprites>
+    <sprite>sprites\play_button</sprite>
+    <sprite>sprites\logo_gradient</sprite>
+    <sprite>sprites\pause_button</sprite>
+    <sprite>sprites\numbers</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
