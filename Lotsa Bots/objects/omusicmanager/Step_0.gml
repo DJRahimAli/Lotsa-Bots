@@ -1,5 +1,4 @@
 if ( room != rTitle )
-//and (instance_exists(oWaveManager))
 {
 	switch (oWaveManager.waveCurrent)
 	{
