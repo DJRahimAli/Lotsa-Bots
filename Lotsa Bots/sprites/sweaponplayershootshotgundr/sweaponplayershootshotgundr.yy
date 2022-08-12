@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 53,
-  "bbox_right": 111,
-  "bbox_top": 97,
-  "bbox_bottom": 155,
+  "bbox_left": 37,
+  "bbox_right": 164,
+  "bbox_top": 76,
+  "bbox_bottom": 175,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"195ee4cb-4d8a-436c-a221-719ee587eb48","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"195ee4cb-4d8a-436c-a221-719ee587eb48","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},"LayerId":{"name":"b5968758-c94c-49c6-bb1c-612ed93db402","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWeaponPlayerShootShotgunD","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},"resourceVersion":"1.0","name":"195ee4cb-4d8a-436c-a221-719ee587eb48","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"029d0d14-f14e-4eee-be6f-8cd64728cda4","path":"sprites/sWeaponPlayerShootShotgunDR/sWeaponPlayerShootShotgunDR.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"029d0d14-f14e-4eee-be6f-8cd64728cda4","path":"sprites/sWeaponPlayerShootShotgunDR/sWeaponPlayerShootShotgunDR.yy",},"LayerId":{"name":"8088216d-80de-461d-81d1-10c98e33f952","path":"sprites/sWeaponPlayerShootShotgunDR/sWeaponPlayerShootShotgunDR.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sWeaponPlayerShootShotgunDR","path":"sprites/sWeaponPlayerShootShotgunDR/sWeaponPlayerShootShotgunDR.yy",},"resourceVersion":"1.0","name":"029d0d14-f14e-4eee-be6f-8cd64728cda4","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sWeaponPlayerShootShotgunD","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},
+    "spriteId": {"name":"sWeaponPlayerShootShotgunDR","path":"sprites/sWeaponPlayerShootShotgunDR/sWeaponPlayerShootShotgunDR.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0a9e589f-d74b-4250-98d6-78dabfe612c9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"195ee4cb-4d8a-436c-a221-719ee587eb48","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"5f952930-6944-4bda-939f-bc621f18be6c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"029d0d14-f14e-4eee-be6f-8cd64728cda4","path":"sprites/sWeaponPlayerShootShotgunDR/sWeaponPlayerShootShotgunDR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 96,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sWeaponPlayerShootShotgunD","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},
+    "parent": {"name":"sWeaponPlayerShootShotgunDR","path":"sprites/sWeaponPlayerShootShotgunDR/sWeaponPlayerShootShotgunDR.yy",},
     "resourceVersion": "1.4",
-    "name": "sWeaponPlayerShootShotgunD",
+    "name": "sWeaponPlayerShootShotgunDR",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b5968758-c94c-49c6-bb1c-612ed93db402","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8088216d-80de-461d-81d1-10c98e33f952","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Entities/Player/Weapons/Shooting with Pump action Shotgun.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sWeaponPlayerShootShotgunD",
+  "name": "sWeaponPlayerShootShotgunDR",
   "tags": [],
   "resourceType": "GMSprite",
 }

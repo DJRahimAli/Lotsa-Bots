@@ -31,3 +31,6 @@ if ( flashAlphaCurrent != 0 )
 	
 	shader_reset();
 }
+
+bat_angle = point_direction(x, y, mouse_x, mouse_y);
+draw_sprite_ext(sWeaponPlayerSwingBat, image_index, x, y, 1, 1, bat_angle, c_white, 1);

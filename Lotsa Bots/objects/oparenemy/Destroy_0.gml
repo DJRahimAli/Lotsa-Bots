@@ -1,1 +1,4 @@
-oWaveManager.enemyAmountCurrent--;
+if (instance_exists(oWaveManager))
+{
+	oWaveManager.enemyAmountCurrent--;
+}
