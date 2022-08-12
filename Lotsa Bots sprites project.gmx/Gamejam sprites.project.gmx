@@ -33,6 +33,11 @@
     </sprites>
     <sprites name="robot enemies">
       <sprite>sprites\big_robot</sprite>
+      <sprite>sprites\big_robot_bat_swing_up</sprite>
+      <sprite>sprites\big_robot_bat_swing_up_right</sprite>
+      <sprite>sprites\big_robot_bat_swing_right</sprite>
+      <sprite>sprites\big_robot_bat_swing_down_right</sprite>
+      <sprite>sprites\big_robot_bat_swing_down</sprite>
       <sprite>sprites\small_robot</sprite>
     </sprites>
     <sprites name="weapons layer">
