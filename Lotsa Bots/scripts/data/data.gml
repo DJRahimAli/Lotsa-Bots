@@ -22,7 +22,7 @@ function WeaponSpriteData()
 	
 	spriteData[character.player][weapons.smg]     = [ [sWeaponPlayerSMGR], [sWeaponPlayerSMGUR], [sWeaponPlayerSMGU], [sWeaponPlayerSMGUR, -1], [sWeaponPlayerSMGR, -1], [sWeaponPlayerSMGDR, -1], [sWeaponPlayerSMGD], [sWeaponPlayerSMGDR] ];
 	
-	spriteData[character.player][weapons.shotgun] = [ [sPlayerR, 1, 1], [sPlayerUR, 1, 1], [sPlayerU, 1, 1], [sPlayerUR, -1, 1], [sPlayerR, -1, 1], [sPlayerDR, -1, 1], [sPlayerD, 1, 1], [sPlayerDR, 1, 1] ];
+	spriteData[character.player][weapons.shotgun] = [ [sWeaponPlayerShotgunR, 1, 1], [sWeaponPlayerShotgunUR, 1, 1], [sWeaponPlayerShotgunU, 1, 1], [sWeaponPlayerShotgunUR, -1, 1], [sWeaponPlayerShotgunR, -1, 1], [sWeaponPlayerShotgunDR, -1, 1], [sWeaponPlayerShotgunD, 1, 1], [sWeaponPlayerShotgunDR, 1, 1] ];
 }
 
 function WaveData()

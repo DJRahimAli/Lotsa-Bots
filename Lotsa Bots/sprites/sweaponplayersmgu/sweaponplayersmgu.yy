@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 0,
-  "bbox_top": 0,
-  "bbox_bottom": 0,
+  "bbox_left": 29,
+  "bbox_right": 132,
+  "bbox_top": 94,
+  "bbox_bottom": 147,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
-  "height": 64,
+  "width": 192,
+  "height": 192,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8b54c480-003d-445b-8b16-3dfffcdd2eb1","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8b54c480-003d-445b-8b16-3dfffcdd2eb1","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"LayerId":{"name":"9768d8d3-f1b1-4e7c-9f68-ac06e5078b2b","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sWeaponPlayerSMGU","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"resourceVersion":"1.0","name":"8b54c480-003d-445b-8b16-3dfffcdd2eb1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3b8abfff-dd0e-4331-a459-6f59e1c6c302","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3b8abfff-dd0e-4331-a459-6f59e1c6c302","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"LayerId":{"name":"916f95de-f262-40f4-b1da-9db25248064c","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sWeaponPlayerSMGU","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"resourceVersion":"1.0","name":"3b8abfff-dd0e-4331-a459-6f59e1c6c302","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sWeaponPlayerSMGU","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ced6cb85-70b1-4ce8-ab62-982045d7556b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b54c480-003d-445b-8b16-3dfffcdd2eb1","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"f9c3d806-3425-47d5-b317-1bdcc484e554","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3b8abfff-dd0e-4331-a459-6f59e1c6c302","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 89,
+    "yorigin": 96,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sWeaponPlayerSMGU","path":"sprites/sWeaponPlayerSMGU/sWeaponPlayerSMGU.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9768d8d3-f1b1-4e7c-9f68-ac06e5078b2b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"916f95de-f262-40f4-b1da-9db25248064c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
