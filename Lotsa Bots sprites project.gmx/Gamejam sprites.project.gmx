@@ -11,7 +11,7 @@
       <sprite>sprites\walking_down_right</sprite>
       <sprite>sprites\walking_right</sprite>
       <sprite>sprites\walking_up_right</sprite>
-      <sprite>sprites\sprite_up</sprite>
+      <sprite>sprites\walking_up</sprite>
     </sprites>
     <sprites name="death sprites">
       <sprite>sprites\death_down</sprite>
@@ -56,6 +56,8 @@
     <sprite>sprites\wall</sprite>
     <sprite>sprites\blue_bullet</sprite>
     <sprite>sprites\orange_bullet</sprite>
+    <sprite>sprites\small_medkit</sprite>
+    <sprite>sprites\big_medkit</sprite>
     <sprites name="unused">
       <sprite>sprites\sprite0</sprite>
       <sprite>sprites\sprite1</sprite>
