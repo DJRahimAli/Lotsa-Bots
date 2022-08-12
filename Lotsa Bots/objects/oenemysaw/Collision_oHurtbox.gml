@@ -1,4 +1,4 @@
-hp = max( 0, hp-other.damage );
+hpCurrent = max( 0, hpCurrent-other.damage );
 
 instance_destroy(other);
-if ( hp == 0 ) instance_destroy();
+if ( hpCurrent == 0 ) instance_destroy();

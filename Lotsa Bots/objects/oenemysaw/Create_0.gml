@@ -1,5 +1,6 @@
 hp = 20;
-hpLast = hp;
+hpCurrent = hp;
+hpLast = hpCurrent;
 
 target = oPlayer;
 

@@ -2,14 +2,14 @@ if ( flashColorCurrent == flashColorSpawn ) flashAlphaCurrent = max( 0, flashAlp
 
 if ( flashColorCurrent == flashColorHurt ) flashAlphaCurrent = max( 0, flashAlphaCurrent-flashSubtractHurt );
 
-if (hp != hpLast)
+if (hpCurrent != hpLast)
 {
-	if (hp < hpLast)
+	if (hpCurrent < hpLast)
 	{
 		flashAlphaCurrent = flashAlphaHurt;
 		flashColorCurrent = flashColorHurt;
 	}
-	hpLast = hp;
+	hpLast = hpCurrent;
 }
 
 #region Movement Code
@@ -141,7 +141,7 @@ switch (state)
 		if ( place_meeting( x, y, target ) )
 		{
 			cooldownCurrent = cooldown;
-			target.hp = max( 0, target.hp-damage );
+			target.hpCurrent = max( 0, target.hpCurrent-damage );
 			if ( cooldown != 0 ) state = 1;
 		}
 	} break;
