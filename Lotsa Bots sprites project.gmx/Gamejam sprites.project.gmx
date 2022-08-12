@@ -22,12 +22,18 @@
     </sprites>
     <sprites name="attacking sprites">
       <sprite>sprites\swinging_bat</sprite>
+      <sprite>sprites\swinging_bat_right</sprite>
+      <sprite>sprites\swinging_bat_down_right</sprite>
+      <sprite>sprites\swinging_bat_down</sprite>
     </sprites>
     <sprites name="robot enemies">
       <sprite>sprites\big_robot</sprite>
       <sprite>sprites\small_robot</sprite>
     </sprites>
     <sprites name="weapons layer">
+      <sprite>sprites\bat_pickup</sprite>
+      <sprite>sprites\shotgun_pickup</sprite>
+      <sprite>sprites\smg_pickup</sprite>
       <sprite>sprites\bat_swing</sprite>
       <sprite>sprites\bat_still</sprite>
       <sprite>sprites\shotgun</sprite>
