@@ -100,5 +100,14 @@ function EnumInit()
 		intermission,
 		size
 	}
+	
+	enum pickup
+	{
+		health,
+		unarmed,
+		smg,
+		shotgun,
+		size
+	}
 }
 
