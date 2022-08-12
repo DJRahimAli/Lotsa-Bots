@@ -172,83 +172,68 @@ if ( playerStateCurrent == playerstate.idle )
 	#endregion
 
 	#region Weapon State
-	var array = weapon[other.weaponCurrent];
-
+	var array = weapon[weaponCurrent];
+	
+	mDir = point_direction( x, y, mouse_x, mouse_y );
+	pDir = point_direction(0, 0, sign(hsp), sign(vsp) );
+	
 	switch (weaponStateCurrent)
 	{
 		case weaponstate.idle:
 		{
-			cooldown = other.weapon[weaponCurrent][weaponvars.cooldown];
-		
+			if ( hsp != 0 || vsp != 0 )
+			{
+				Diff = angle_difference( pDir, direction );
+				direction += Diff * anglePlayerDelay;
+			}
+			
 			if ( keyPrimary )
 			{
-				mDir = point_direction( x, y, mouse_x, mouse_y );
-				if ( global.mobileControls ) mDir = oAnalogueRight._direction;
-				var Diff = angle_difference( mDir, direction );
-			
-				if ( !firstShot ) direction += Diff * angleAimDelay; else direction = mDir;
-			
-				firstShot = false;
-			
-				oWeapon.image_speed = 1;
-			
-				repeat(weapon[weaponCurrent][weaponvars.amount])
-				{
-					with ( instance_create_layer( x, y, "Layer1", oHurtbox ) ) 
-					{
-						timer  = array[weaponvars.timer];
-						length = array[weaponvars.length];
-						spd	   = array[weaponvars.spd];
-						damage = array[weaponvars.damage];
-						bullet = array[weaponvars.bullet];
-						var spreadmin = array[weaponvars.spreadmin];
-						var spreadmax = array[weaponvars.spreadmax];
-						var spread = irandom_range(-spreadmax, spreadmax);
-						var spreadfinal = clamp( abs(spread), spreadmin, spreadmax );
-						dir = round(other.direction + spreadfinal*sign(spread));
-						sprite_index = array[weaponvars.sprite];
-						mask_index = array[weaponvars.mask];
-						image_xscale = array[weaponvars.xscale];
-						image_yscale = array[weaponvars.yscale];
-						image_angle = array[weaponvars.rot];
-						image_blend = array[weaponvars.col];
-						image_alpha = array[weaponvars.alpha];
-					}
-				}
-			
-				if ( cooldown != 0 ) weaponStateCurrent = weaponstate.primary;
-			}
-			else
-			{
-				firstShot = true;
-			
-				oWeapon.image_speed = 0;
-				oWeapon.image_index = 0;
-			
-				if ( hsp != 0 || vsp != 0 )
-				{
-					pDir = point_direction(0, 0, sign(hsp), sign(vsp) );
-					Diff = angle_difference( pDir, direction );
-					direction += Diff * anglePlayerDelay;
-				}
+				direction = mDir;
+				weaponStateCurrent = weaponstate.primary;
 			}
 		} break;
 	
 		case weaponstate.primary:
 		{
-			mDir = point_direction( x, y, mouse_x, mouse_y );
 			if ( global.mobileControls ) mDir = oAnalogueRight._direction;
 			var Diff = angle_difference( mDir, direction );
 		
 			direction += Diff * angleAimDelay;
-		
-		
-			oWeapon.image_speed = 1;
-		
-		
+			
 			cooldown = max( 0, cooldown-1 );
-		
-			if ( cooldown == 0 ) weaponStateCurrent = weaponstate.idle;
+			
+			if ( keyPrimary )
+			{
+				if ( cooldown == 0 )
+				{
+					cooldown = weapon[weaponCurrent][weaponvars.cooldown];
+					repeat(weapon[weaponCurrent][weaponvars.amount])
+					{
+						with ( instance_create_layer( x, y, "Layer1", oHurtbox ) ) 
+						{
+							timer  = array[weaponvars.timer];
+							length = array[weaponvars.length];
+							spd	   = array[weaponvars.spd];
+							damage = array[weaponvars.damage];
+							bullet = array[weaponvars.bullet];
+							var spreadmin = array[weaponvars.spreadmin];
+							var spreadmax = array[weaponvars.spreadmax];
+							var spread = irandom_range(-spreadmax, spreadmax);
+							var spreadfinal = clamp( abs(spread), spreadmin, spreadmax );
+							dir = round(other.direction + spreadfinal*sign(spread));
+							sprite_index = array[weaponvars.sprite];
+							mask_index = array[weaponvars.mask];
+							image_xscale = array[weaponvars.xscale];
+							image_yscale = array[weaponvars.yscale];
+							image_angle = array[weaponvars.rot];
+							image_blend = array[weaponvars.col];
+							image_alpha = array[weaponvars.alpha];
+						}
+					}
+				}
+			}
+			else if ( cooldown == 0 ) weaponStateCurrent = weaponstate.idle;
 		} break;
 	}
 	#endregion
