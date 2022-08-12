@@ -24,5 +24,5 @@ if ( instance_exists(oPlayer) ) depth = oPlayer.depth + 2*sign(oPlayer.y+8 - y);
 if ( timer >= 0 ) timer = max( 0, timer-1 );
 
 if ( timer == 0
-|| place_meeting(x, y, oCollision)
+|| bullet && place_meeting(x, y, oCollision)
 ) instance_destroy();
