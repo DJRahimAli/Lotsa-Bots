@@ -31,5 +31,3 @@ if ( flashAlphaCurrent != 0 )
 	
 	shader_reset();
 }
-
-draw_sprite_ext(sWeaponPlayerSwingBat, 0, x, y, 1, 1, round( round(oPlayer.direction / 45) * 45 ), c_white, 1);

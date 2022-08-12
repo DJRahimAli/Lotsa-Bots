@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPause",
-    "path": "sprites/sPause/sPause.yy",
+    "name": "sBack",
+    "path": "sprites/sBack/sBack.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPause",
+  "name": "oBack",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -132,8 +132,4 @@ instance_create_depth( 0, 0, depth-1, oWeapon );
 
 sequenceUI = layer_sequence_create( "Controls", 0, 0, sqUI );
 
-if ( global.mobileControls )
-{
-	sequenceControls = layer_sequence_create( "Controls", 0, 0, sqControls );
-	sequenceControls2 = layer_sequence_create( "Controls", 0, 0, sqControls2 );
-}
+if ( global.mobileControls ) sequenceControls = layer_sequence_create( "Controls", 0, 0, sqControls );
