@@ -80,6 +80,8 @@
     <sprite>sprites\logo_gradient</sprite>
     <sprite>sprites\pause_button</sprite>
     <sprite>sprites\numbers</sprite>
+    <sprite>sprites\wave_text_template</sprite>
+    <sprite>sprites\wave_text</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
