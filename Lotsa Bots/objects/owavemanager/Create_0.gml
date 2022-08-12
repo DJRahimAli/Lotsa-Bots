@@ -7,3 +7,4 @@ cooldownCurrent = 0;
 
 enemyAmountCurrent = waveData[arenaCurrent][waveCurrent][wavevars.enemyamount];
 
+intermissionCurrent = waveData[arenaCurrent][waveCurrent][wavevars.intermission];

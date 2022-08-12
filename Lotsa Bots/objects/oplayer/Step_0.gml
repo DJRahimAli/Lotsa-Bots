@@ -273,6 +273,7 @@ if ( playerStateCurrent == playerstate.idle )
 		}
 		if (hp < hpLast)
 		{
+			if ( !audio_is_playing(sndPlayerHit) ) audio_play_sound( sndPlayerHit, 5, false );
 			flashAlphaCurrent = flashAlphaHurt;
 			flashColorCurrent = flashColorHurt;
 		}
