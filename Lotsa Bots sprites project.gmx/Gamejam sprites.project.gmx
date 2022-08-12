@@ -21,15 +21,17 @@
       <sprite>sprites\death_up_legs_down</sprite>
     </sprites>
     <sprites name="attacking sprites">
+      <sprites name="with bat">
+        <sprite>sprites\swinging_bat_right_with_bat</sprite>
+        <sprite>sprites\swinging_bat_down_right_with_bat</sprite>
+        <sprite>sprites\swinging_bat_down_with_bat</sprite>
+        <sprite>sprites\swinging_bat_up_right_with_bat</sprite>
+        <sprite>sprites\swinging_bat_up_with_bat</sprite>
+      </sprites>
       <sprite>sprites\swinging_bat</sprite>
       <sprite>sprites\swinging_bat_right</sprite>
-      <sprite>sprites\swinging_bat_right_with_bat</sprite>
       <sprite>sprites\swinging_bat_down_right</sprite>
-      <sprite>sprites\swinging_bat_down_right_with_bat</sprite>
       <sprite>sprites\swinging_bat_down</sprite>
-      <sprite>sprites\swinging_bat_down_with_bat</sprite>
-      <sprite>sprites\swinging_bat_up_right_with_bat</sprite>
-      <sprite>sprites\swinging_bat_up_with_bat</sprite>
     </sprites>
     <sprites name="robot enemies">
       <sprite>sprites\big_robot</sprite>
@@ -57,6 +59,13 @@
       <sprite>sprites\shotgun_shooting</sprite>
       <sprite>sprites\smg</sprite>
       <sprite>sprites\smg_shooting</sprite>
+    </sprites>
+    <sprites name="bat and arm only">
+      <sprite>sprites\bat_and_arm_right</sprite>
+      <sprite>sprites\bat_and_arm_down_right</sprite>
+      <sprite>sprites\bat_and_arm_down</sprite>
+      <sprite>sprites\bat_and_arm_up_right</sprite>
+      <sprite>sprites\bat_and_arm_up</sprite>
     </sprites>
     <sprite>sprites\player_victory</sprite>
     <sprite>sprites\stick_top</sprite>
