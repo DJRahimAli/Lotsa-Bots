@@ -41,6 +41,7 @@ if ( enemyAmountCurrent == 0 )
 		else
 		{
 			oPlayer.playerStateCurrent = playerstate.win;
+			image_speed = 1;
 			show_debug_message( "set player to win playerstate" );
 		}
 	}

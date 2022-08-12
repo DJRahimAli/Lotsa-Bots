@@ -1,6 +1,10 @@
 hp = 100;
 hpLast = hp;
 
+respawnCooldown = 120;
+respawnCooldownCurrent = respawnCooldown;
+
+
 flashAlphaSpawn = 0.8;
 flashAlphaHurt = 0.8;
 flashAlphaCurrent = flashAlphaSpawn;
@@ -67,7 +71,7 @@ playerStateCurrent = playerstate.idle;
 cooldown = 0;
 firstShot = false;
 WeaponData();
-weaponCurrent = weapons.unarmed;
+weaponCurrent = weapons.smg;
 #endregion
 
 
@@ -124,6 +128,8 @@ for (var i = 0; i < character.size; i++)
 #endregion
 
 instance_create_depth( 0, 0, depth-1, oWeapon );
+
+sequenceUI = layer_sequence_create( "Controls", 0, 0, sqUI );
 
 if ( global.mobileControls )
 {

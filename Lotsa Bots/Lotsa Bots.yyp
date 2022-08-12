@@ -7,6 +7,7 @@
     {"id":{"name":"sAnalogueBase","path":"sprites/sAnalogueBase/sAnalogueBase.yy",},"order":8,},
     {"id":{"name":"map_value","path":"scripts/map_value/map_value.yy",},"order":7,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":11,},
+    {"id":{"name":"sqUI","path":"sequences/sqUI/sqUI.yy",},"order":7,},
     {"id":{"name":"obj_HTML_FS","path":"objects/obj_HTML_FS/obj_HTML_FS.yy",},"order":1,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sPlay","path":"sprites/sPlay/sPlay.yy",},"order":9,},

@@ -267,6 +267,7 @@ if ( playerStateCurrent == playerstate.idle )
 		if ( hp == 0 )
 		{
 			playerStateCurrent = playerstate.dead;
+			image_speed = 1;
 			instance_destroy(oWeapon);
 			if ( global.mobileControls ) layer_sequence_destroy(sequenceControls);
 			hpLast = 0;
@@ -284,11 +285,7 @@ if ( playerStateCurrent == playerstate.idle )
 
 if ( playerStateCurrent == playerstate.dead )
 {
+	respawnCooldownCurrent = max( 0, respawnCooldownCurrent-1 );
 	
-}
-
-
-if ( playerStateCurrent == playerstate.win )
-{
-	
+	if ( respawnCooldownCurrent == 0 ) instance_destroy();
 }
