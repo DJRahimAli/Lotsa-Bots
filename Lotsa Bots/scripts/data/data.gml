@@ -19,7 +19,7 @@ function PlayerSpriteData()
 function WeaponSpriteData()
 {
 	spriteData[character.player][weapons.unarmed][weaponstate.idle]    = [ [sWeaponPlayerBatR], [sWeaponPlayerBatUR], [sWeaponPlayerBatU], [sWeaponPlayerBatUR, -1], [sWeaponPlayerBatR, -1], [sWeaponPlayerBatDR, -1], [sWeaponPlayerBatD], [sWeaponPlayerBatDR] ];
-	spriteData[character.player][weapons.unarmed][weaponstate.primary] = [ [sPlayerSwingR], [sWeaponPlayerBatUR], [sWeaponPlayerBatU], [sWeaponPlayerBatUR, -1], [sPlayerSwingR, -1], [sPlayerSwingDR, -1], [sPlayerSwingD], [sPlayerSwingDR] ];
+	spriteData[character.player][weapons.unarmed][weaponstate.primary] = [ [sWeaponPlayerBatSwingR], [sWeaponPlayerBatSwingUR], [sWeaponPlayerBatSwingU], [sWeaponPlayerBatSwingUR, -1], [sWeaponPlayerBatSwingR, -1], [sWeaponPlayerBatSwingDR, -1], [sWeaponPlayerBatSwingD], [sWeaponPlayerBatSwingDR] ];
 	
 	spriteData[character.player][weapons.smg][weaponstate.idle]     = [ [sWeaponPlayerSMGR], [sWeaponPlayerSMGUR], [sWeaponPlayerSMGU], [sWeaponPlayerSMGUR, -1], [sWeaponPlayerSMGR, -1], [sWeaponPlayerSMGDR, -1], [sWeaponPlayerSMGD], [sWeaponPlayerSMGDR] ];
 	
