@@ -25,6 +25,7 @@ if ( enemyAmountCurrent == 0 )
 		if ( waveCurrent != wave.three )
 		{
 			waveCurrent++;
+			showWaveSignTimer = 60 * 3;
 			enemyAmountCurrent = waveData[arenaCurrent][waveCurrent][wavevars.enemyamount];
 			cooldownCurrent = 0;
 			intermissionCurrent = waveData[arenaCurrent][waveCurrent][wavevars.intermission];
