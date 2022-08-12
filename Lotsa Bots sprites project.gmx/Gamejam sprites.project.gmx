@@ -8,7 +8,6 @@
   <sprites name="sprites">
     <sprites name="walking sprites">
       <sprite>sprites\walking_down</sprite>
-      <sprite>sprites\player_victory</sprite>
       <sprite>sprites\walking_down_right</sprite>
       <sprite>sprites\walking_right</sprite>
       <sprite>sprites\walking_up_right</sprite>
@@ -51,6 +50,7 @@
       <sprite>sprites\smg</sprite>
       <sprite>sprites\smg_shooting</sprite>
     </sprites>
+    <sprite>sprites\player_victory</sprite>
     <sprite>sprites\stick_top</sprite>
     <sprite>sprites\stick_base</sprite>
     <sprite>sprites\teleporter_template</sprite>
