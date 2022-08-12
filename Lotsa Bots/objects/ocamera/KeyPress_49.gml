@@ -1,7 +1,6 @@
 if (os_browser == browser_not_a_browser)
 {
-	fullscreen = !fullscreen;
-	window_set_fullscreen(fullscreen);
+	window_set_fullscreen(!window_get_fullscreen());
 	
 	// Resize window & application surface
 	window_set_size(RES_W, RES_H);

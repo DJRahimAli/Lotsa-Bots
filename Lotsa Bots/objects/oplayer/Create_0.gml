@@ -125,4 +125,8 @@ for (var i = 0; i < character.size; i++)
 
 instance_create_depth( 0, 0, depth-1, oWeapon );
 
-if ( global.mobileControls ) sequenceControls = layer_sequence_create( "Controls", 0, 0, sqControls );
+if ( global.mobileControls )
+{
+	sequenceControls = layer_sequence_create( "Controls", 0, 0, sqControls );
+	sequenceControls2 = layer_sequence_create( "Controls", 0, 0, sqControls2 );
+}
