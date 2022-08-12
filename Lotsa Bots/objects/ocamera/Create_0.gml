@@ -10,8 +10,6 @@
 view_enabled = true;
 view_visible[0] = true;
 
-fullscreen = false;
-
 // Create camera
 camera = camera_create_view(0, 0, CAM_RES_W, CAM_RES_H);
 
@@ -19,6 +17,9 @@ view_set_camera(0, camera);
 
 // Set target object
 target = oPlayer;
+
+targetX = 0;
+targetY = 0;
 
 if ( instance_exists( target ) )
 {
