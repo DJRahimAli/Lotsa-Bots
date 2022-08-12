@@ -67,7 +67,7 @@ playerStateCurrent = playerstate.idle;
 cooldown = 0;
 firstShot = false;
 WeaponData();
-weaponCurrent = weapons.smg;
+weaponCurrent = weapons.unarmed;
 #endregion
 
 

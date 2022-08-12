@@ -1,5 +1,6 @@
-pickupCurrent = pickup.health;
+pickupCurrent = pickup.medkitsmall;
 
 image_index = pickupCurrent;
 
-hp = 15;
+hpsmall = 15;
+hp = 25;
