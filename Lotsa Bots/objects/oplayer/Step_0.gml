@@ -181,6 +181,9 @@ if ( playerStateCurrent == playerstate.idle )
 	{
 		case weaponstate.idle:
 		{
+			oWeapon.image_index = 0;
+			oWeapon.image_speed = 0;
+			
 			if ( hsp != 0 || vsp != 0 )
 			{
 				Diff = angle_difference( pDir, direction );
@@ -189,6 +192,7 @@ if ( playerStateCurrent == playerstate.idle )
 			
 			if ( keyPrimary )
 			{
+				oWeapon.image_speed = 1;
 				direction = mDir;
 				weaponStateCurrent = weaponstate.primary;
 			}
@@ -196,6 +200,8 @@ if ( playerStateCurrent == playerstate.idle )
 	
 		case weaponstate.primary:
 		{
+			oWeapon.image_speed = 1;
+			
 			if ( global.mobileControls ) mDir = oAnalogueRight._direction;
 			var Diff = angle_difference( mDir, direction );
 		
