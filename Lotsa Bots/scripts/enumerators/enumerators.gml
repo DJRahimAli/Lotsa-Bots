@@ -86,7 +86,6 @@ function EnumInit()
 	
 	enum wave
 	{
-		none,
 		one,
 		two,
 		three,

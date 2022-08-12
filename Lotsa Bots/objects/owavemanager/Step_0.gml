@@ -25,7 +25,7 @@ if ( enemyAmountCurrent == 0 )
 		if ( waveCurrent != wave.three )
 		{
 			waveCurrent++;
-			showWaveSignTimer = 60 * 3;
+			waveSignCooldownCurrent = waveSignCooldown;
 			enemyAmountCurrent = waveData[arenaCurrent][waveCurrent][wavevars.enemyamount];
 			cooldownCurrent = 0;
 			intermissionCurrent = waveData[arenaCurrent][waveCurrent][wavevars.intermission];
@@ -46,4 +46,15 @@ if ( enemyAmountCurrent == 0 )
 			//show_debug_message( "set player to win playerstate" );
 		}
 	}
+}
+
+
+if ( waveSignCooldownCurrent == 0 )
+{
+	waveSignY = lerp(waveSignY, -70, 0.1);
+}
+else
+{
+	waveSignY = lerp(waveSignY, 70, 0.1);
+	waveSignCooldownCurrent--;
 }
