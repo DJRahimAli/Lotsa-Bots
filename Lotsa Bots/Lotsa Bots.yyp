@@ -8,6 +8,7 @@
     {"id":{"name":"map_value","path":"scripts/map_value/map_value.yy",},"order":7,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":11,},
     {"id":{"name":"sqUI","path":"sequences/sqUI/sqUI.yy",},"order":7,},
+    {"id":{"name":"sWeaponPlayerShootShotgunD","path":"sprites/sWeaponPlayerShootShotgunD/sWeaponPlayerShootShotgunD.yy",},"order":0,},
     {"id":{"name":"obj_HTML_FS","path":"objects/obj_HTML_FS/obj_HTML_FS.yy",},"order":1,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sPlay","path":"sprites/sPlay/sPlay.yy",},"order":9,},
@@ -162,6 +163,7 @@
     {"folderPath":"folders/Sprites/Entities/Player/Idle.yy","order":7,"resourceVersion":"1.0","name":"Idle","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Entities/Player/Dead.yy","order":8,"resourceVersion":"1.0","name":"Dead","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Entities/Player/Win.yy","order":9,"resourceVersion":"1.0","name":"Win","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Entities/Player/Weapons/Shooting with Pump action Shotgun.yy","order":3,"resourceVersion":"1.0","name":"Shooting with Pump action Shotgun","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
