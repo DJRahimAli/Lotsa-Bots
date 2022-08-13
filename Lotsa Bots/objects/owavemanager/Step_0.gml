@@ -18,6 +18,22 @@ else
 
 if ( enemyAmountCurrent == 0 )
 {
+	if ( waveCurrent == wave.three )
+	{
+		if ( intermissionCurrent == waveData[arenaCurrent][waveCurrent][wavevars.intermission] )
+		{
+			audio_stop_sound(musWave1);
+			audio_stop_sound(musWave2);
+			audio_stop_sound(musWave3);
+			audio_play_sound( musFanfare, 5, false );
+			oPlayer.playerStateCurrent = playerstate.win;
+			oPlayer.flashAlphaCurrent = 0;
+			instance_destroy(oWeapon);
+			image_speed = 1;
+		}
+		//show_debug_message( "set player to win playerstate" );
+	}
+	
 	intermissionCurrent = max( 0, intermissionCurrent-1 );
 	
 	if ( intermissionCurrent == 0 )
@@ -35,18 +51,7 @@ if ( enemyAmountCurrent == 0 )
 	}
 	else
 	{
-		if ( waveCurrent != wave.three )
-		{
-			//show_debug_message( "show next wave number on screen" );
-		}
-		else
-		{
-			oPlayer.playerStateCurrent = playerstate.win;
-			oPlayer.flashAlphaCurrent = 0;
-			instance_destroy(oWeapon);
-			image_speed = 1;
-			//show_debug_message( "set player to win playerstate" );
-		}
+
 	}
 }
 
