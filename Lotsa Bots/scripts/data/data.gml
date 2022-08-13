@@ -1,9 +1,9 @@
 function WeaponData()
 {
-	weapon[weapons.none] =	  [ 0,  0, 0,  0,   0,  0,  true,  0, 0,  sMissing, sMissing,	1, 1, 0, c_white, 1 ];
+	weapon[weapons.none]	= [ 0,  0, 0,  0,   0,  0,  true,  0, 0,  sMissing, sMissing,	1, 1, 0, c_white, 1 ];
 	weapon[weapons.unarmed] = [ 20, 1, 10, 132, 0,  12, false, 0, 0,  -1,		sBatHitbox, 1, 1, 0, c_white, 1 ];
-	weapon[weapons.smg]		= [ 8,  1, 30, 0,   20, 8,  true,  0, 5,  sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
-	weapon[weapons.shotgun] = [ 40, 3, 20, 0,   20, 20,  true,  2, 15, sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
+	weapon[weapons.smg]		= [ 7,  1, 30, 0,   20, 8,  true,  0, 5,  sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
+	weapon[weapons.shotgun] = [ 40, 3, 20, 0,   20, 12, true,  2, 15, sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
 }
 
 function PlayerSpriteData()
@@ -28,27 +28,12 @@ function WeaponSpriteData()
 	spriteData[character.player][weapons.shotgun][weaponstate.primary] = [ [sWeaponPlayerShootShotgunR, 1, 1], [sWeaponPlayerShootShotgunUR, 1, 1], [sWeaponPlayerShootShotgunU, 1, 1], [sWeaponPlayerShootShotgunUR, -1, 1], [sWeaponPlayerShootShotgunR, -1, 1], [sWeaponPlayerShootShotgunDR, -1, 1], [sWeaponPlayerShootShotgunD, 1, 1], [sWeaponPlayerShootShotgunDR, 1, 1] ];
 }
 
+
 function EnemySpriteData()
 {
-	spriteData[character.arrow][playerstate.idle]  = [ [sArrowr, sArrowd, 1, 1, 0, c_white],  [sArrowur, sArrowd, 1, 1, 0, c_white],  [sArrowu, sArrowd, 1, 1, 0, c_white],  [sArrowul, sArrowd, 1, 1, 0, c_white],   [sArrowl, sArrowd, 1, 1, 0, c_white],   [sArrowdl, sArrowd, 1, 1, 0, c_white],   [sArrowd, sArrowd, 1, 1, 0, c_white],  [sArrowdr, sArrowd, 1, 1, 0, c_white]  ];
-
-	spriteData[character.arrow][playerstate.idle]  = [ [sArrowr, sArrowd, 1, 1, 0, c_red],  [sArrowur, sArrowd, 1, 1, 0, c_red],  [sArrowu, sArrowd, 1, 1, 0, c_red],  [sArrowul, sArrowd, 1, 1, 0, c_red],   [sArrowl, sArrowd, 1, 1, 0, c_red],   [sArrowdl, sArrowd, 1, 1, 0, c_red],   [sArrowd, sArrowd, 1, 1, 0, c_red],  [sArrowdr, sArrowd, 1, 1, 0, c_red]  ];
-	
-	
-	spriteData[character.player][playerstate.idle] = [ [sPlayerR, sPlayerD], [sPlayerUR, sPlayerD], [sPlayerU, sPlayerD], [sPlayerUR, sPlayerD, -1], [sPlayerR, sPlayerD, -1], [sPlayerDR, sPlayerD, -1], [sPlayerD, -2], [sPlayerDR, sPlayerD] ];
+	spriteData[0] = [ [sPlayerR, sPlayerD], [sPlayerUR, sPlayerD], [sPlayerU, sPlayerD], [sPlayerUR, sPlayerD, -1], [sPlayerR, sPlayerD, -1], [sPlayerDR, sPlayerD, -1], [sPlayerD, -2], [sPlayerDR, sPlayerD] ];
 }
 
-function EnemyWeaponSpriteData()
-{
-	spriteData[character.player][weapons.unarmed][weaponstate.idle]    = [ [sEnemyBigBatR], [sEnemyBigBatUR], [sEnemyBigBatU], [sEnemyBigBatUR, -1], [sEnemyBigBatR, -1], [sEnemyBigBatDR, -1], [sEnemyBigBatD], [sEnemyBigBatDR] ];
-	spriteData[character.player][weapons.unarmed][weaponstate.primary] = [ [sEnemyBigSwingBatR], [sEnemyBigSwingBatUR], [sEnemyBigSwingBatU], [sEnemyBigSwingBatUR, -1], [sEnemyBigSwingBatR, -1], [sEnemyBigSwingBatDR, -1], [sEnemyBigSwingBatD], [sEnemyBigSwingBatDR] ];
-	
-	spriteData[character.player][weapons.smg][weaponstate.idle]     = [ [sEnemyBigSMGR], [sEnemyBigSMGUR], [sEnemyBigSMGU], [sEnemyBigSMGUR, -1], [sEnemyBigSMGR, -1], [sEnemyBigSMGDR, -1], [sEnemyBigSMGD], [sEnemyBigSMGDR] ];
-	spriteData[character.player][weapons.smg][weaponstate.primary]     = [ [sEnemyBigSMGR], [sEnemyBigSMGUR], [sEnemyBigSMGU], [sEnemyBigSMGUR, -1], [sEnemyBigSMGR, -1], [sEnemyBigSMGDR, -1], [sEnemyBigSMGD], [sEnemyBigSMGDR] ];
-	
-	spriteData[character.player][weapons.shotgun][weaponstate.idle] = [ [sEnemyBigShotgunR, 1, 1], [sEnemyBigShotgunUR, 1, 1], [sEnemyBigShotgunU, 1, 1], [sEnemyBigShotgunUR, -1, 1], [sEnemyBigShotgunR, -1, 1], [sEnemyBigShotgunDR, -1, 1], [sEnemyBigShotgunD, 1, 1], [sEnemyBigShotgunDR, 1, 1] ];
-	spriteData[character.player][weapons.shotgun][weaponstate.primary] = [ [sEnemyBigShotgunR, 1, 1], [sEnemyBigShotgunUR, 1, 1], [sEnemyBigShotgunU, 1, 1], [sEnemyBigShotgunUR, -1, 1], [sEnemyBigShotgunR, -1, 1], [sEnemyBigShotgunDR, -1, 1], [sEnemyBigShotgunD, 1, 1], [sEnemyBigShotgunDR, 1, 1] ];
-}
 
 function WaveData()
 {
