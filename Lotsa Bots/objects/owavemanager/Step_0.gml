@@ -42,6 +42,8 @@ if ( enemyAmountCurrent == 0 )
 		else
 		{
 			oPlayer.playerStateCurrent = playerstate.win;
+			oPlayer.flashAlphaCurrent = 0;
+			instance_destroy(oWeapon);
 			image_speed = 1;
 			//show_debug_message( "set player to win playerstate" );
 		}
