@@ -38,3 +38,5 @@ for (var i = 0; i < character.size; i++)
 	}
 }
 #endregion
+
+crosshairDistance = 180;

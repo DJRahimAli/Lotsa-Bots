@@ -141,6 +141,7 @@
     {"id":{"name":"sFullscreen","path":"sprites/sFullscreen/sFullscreen.yy",},"order":1,},
     {"id":{"name":"sEnemyBigSwingBatR","path":"sprites/sEnemyBigSwingBatR/sEnemyBigSwingBatR.yy",},"order":2,},
     {"id":{"name":"musWave1","path":"sounds/musWave1/musWave1.yy",},"order":1,},
+    {"id":{"name":"sCrosshair","path":"sprites/sCrosshair/sCrosshair.yy",},"order":9,},
     {"id":{"name":"sndEnemySpawn","path":"sounds/sndEnemySpawn/sndEnemySpawn.yy",},"order":5,},
     {"id":{"name":"rBlueArena","path":"rooms/rBlueArena/rBlueArena.yy",},"order":1,},
     {"id":{"name":"sWeaponPlayerBatR","path":"sprites/sWeaponPlayerBatR/sWeaponPlayerBatR.yy",},"order":0,},
