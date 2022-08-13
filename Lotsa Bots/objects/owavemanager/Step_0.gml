@@ -31,11 +31,7 @@ if ( enemyAmountCurrent == 0 )
 			intermissionCurrent = waveData[arenaCurrent][waveCurrent][wavevars.intermission];
 			//show_debug_message( "set to next wave and set enemyamount and cooldown" );
 		}
-		else
-		if (room_next(room)<>-1)
-		{
-			room_goto_next();
-		}
+		else room_goto_next();
 	}
 	else
 	{
