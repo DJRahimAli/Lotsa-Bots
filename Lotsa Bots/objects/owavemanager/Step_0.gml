@@ -61,9 +61,6 @@ if ( waveSignCooldownCurrent == 0 )
 else
 {
 	waveSignY = lerp(waveSignY, 70, 0.1);
-	if (waveCurrent = 0)
-	{
-		arenaSignY = lerp(arenaSignY, window_get_height() - 70, 0.1);
-	}
+	if (waveCurrent = wave.one) arenaSignY = lerp(arenaSignY, window_get_height() - 70, 0.1);
 	waveSignCooldownCurrent--;
 }
