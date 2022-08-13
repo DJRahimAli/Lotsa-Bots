@@ -70,24 +70,6 @@
       <sprite>sprites\bat_arm_head_down_right</sprite>
       <sprite>sprites\bat_arm_head_down</sprite>
     </sprites>
-    <sprite>sprites\player_victory</sprite>
-    <sprite>sprites\stick_top</sprite>
-    <sprite>sprites\stick_base</sprite>
-    <sprite>sprites\teleporter_template</sprite>
-    <sprite>sprites\red_teleporter</sprite>
-    <sprite>sprites\blue_teleporter</sprite>
-    <sprite>sprites\floor_tiles</sprite>
-    <sprite>sprites\all_brick_related_sprites</sprite>
-    <sprite>sprites\brick_particles</sprite>
-    <sprite>sprites\hard_block</sprite>
-    <sprite>sprites\brick</sprite>
-    <sprite>sprites\brick_breaking</sprite>
-    <sprite>sprites\wall_decorations</sprite>
-    <sprite>sprites\wall</sprite>
-    <sprite>sprites\blue_bullet</sprite>
-    <sprite>sprites\orange_bullet</sprite>
-    <sprite>sprites\small_medkit</sprite>
-    <sprite>sprites\big_medkit</sprite>
     <sprites name="unused">
       <sprite>sprites\sprite0</sprite>
       <sprite>sprites\sprite1</sprite>
@@ -106,6 +88,24 @@
       <sprite>sprites\sprite36</sprite>
       <sprite>sprites\sprite40</sprite>
     </sprites>
+    <sprite>sprites\player_victory</sprite>
+    <sprite>sprites\stick_top</sprite>
+    <sprite>sprites\stick_base</sprite>
+    <sprite>sprites\teleporter_template</sprite>
+    <sprite>sprites\red_teleporter</sprite>
+    <sprite>sprites\blue_teleporter</sprite>
+    <sprite>sprites\floor_tiles</sprite>
+    <sprite>sprites\all_brick_related_sprites</sprite>
+    <sprite>sprites\brick_particles</sprite>
+    <sprite>sprites\hard_block</sprite>
+    <sprite>sprites\brick</sprite>
+    <sprite>sprites\brick_breaking</sprite>
+    <sprite>sprites\wall_decorations</sprite>
+    <sprite>sprites\wall</sprite>
+    <sprite>sprites\blue_bullet</sprite>
+    <sprite>sprites\orange_bullet</sprite>
+    <sprite>sprites\small_medkit</sprite>
+    <sprite>sprites\big_medkit</sprite>
     <sprite>sprites\play_button</sprite>
     <sprite>sprites\logo_gradient</sprite>
     <sprite>sprites\pause_button</sprite>
@@ -115,8 +115,9 @@
     <sprite>sprites\wave_text_template</sprite>
     <sprite>sprites\arena_text_template</sprite>
     <sprite>sprites\wave_text</sprite>
-    <sprite>sprites\sprite65</sprite>
-    <sprite>sprites\sprite67</sprite>
+    <sprite>sprites\arena_map_idea</sprite>
+    <sprite>sprites\back_and_quit_buttons</sprite>
+    <sprite>sprites\ending_cutscene</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

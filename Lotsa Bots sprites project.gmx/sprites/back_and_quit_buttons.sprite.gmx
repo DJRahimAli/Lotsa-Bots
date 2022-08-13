@@ -20,12 +20,12 @@
   <width>192</width>
   <height>64</height>
   <frames>
-    <frame index="0">images\sprite67_0.png</frame>
-    <frame index="1">images\sprite67_1.png</frame>
-    <frame index="2">images\sprite67_2.png</frame>
-    <frame index="3">images\sprite67_3.png</frame>
-    <frame index="4">images\sprite67_4.png</frame>
-    <frame index="5">images\sprite67_5.png</frame>
-    <frame index="6">images\sprite67_6.png</frame>
+    <frame index="0">images\back_and_quit_buttons_0.png</frame>
+    <frame index="1">images\back_and_quit_buttons_1.png</frame>
+    <frame index="2">images\back_and_quit_buttons_2.png</frame>
+    <frame index="3">images\back_and_quit_buttons_3.png</frame>
+    <frame index="4">images\back_and_quit_buttons_4.png</frame>
+    <frame index="5">images\back_and_quit_buttons_5.png</frame>
+    <frame index="6">images\back_and_quit_buttons_6.png</frame>
   </frames>
 </sprite>
