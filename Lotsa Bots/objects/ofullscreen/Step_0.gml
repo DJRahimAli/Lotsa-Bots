@@ -27,7 +27,7 @@ else
 				
 				display_set_gui_size(RES_W, RES_H);
 			}
-			else HTML_FS_canvas_fullscreen();
+			else with (obj_HTML_FS) HTML_FS_canvas_fullscreen();
 		}
 		touch_id = -1;
 	}

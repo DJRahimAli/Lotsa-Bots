@@ -13,4 +13,4 @@ waveSignCooldown = 60 * 3;
 waveSignCooldownCurrent = waveSignCooldown;
 
 waveSignY = -64;
-arenaSignY = window_get_height() + 70;
+arenaSignY = display_get_gui_height() + 70;
