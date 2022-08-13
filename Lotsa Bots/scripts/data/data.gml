@@ -14,6 +14,10 @@ function PlayerSpriteData()
 	
 	
 	spriteData[character.player][playerstate.idle] = [ [sPlayerR, sPlayerD], [sPlayerUR, sPlayerD], [sPlayerU, sPlayerD], [sPlayerUR, sPlayerD, -1], [sPlayerR, sPlayerD, -1], [sPlayerDR, sPlayerD, -1], [sPlayerD, -2], [sPlayerDR, sPlayerD] ];
+	
+	spriteData[character.player][playerstate.dead] = [ [sPlayerDeadR, sPlayerD], [sPlayerDeadU, sPlayerD], [sPlayerDeadU, sPlayerD], [sPlayerDeadU, sPlayerD], [sPlayerDeadR, sPlayerD, -1 ], [sPlayerDeadD, sPlayerD], [sPlayerDeadD, sPlayerD], [sPlayerDeadD, sPlayerD] ];
+	
+	
 }
 
 function WeaponSpriteData()
