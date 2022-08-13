@@ -66,6 +66,9 @@
       <sprite>sprites\bat_and_arm_down</sprite>
       <sprite>sprites\bat_and_arm_up_right</sprite>
       <sprite>sprites\bat_and_arm_up</sprite>
+      <sprite>sprites\bat_arm_head_right</sprite>
+      <sprite>sprites\bat_arm_head_down_right</sprite>
+      <sprite>sprites\bat_arm_head_down</sprite>
     </sprites>
     <sprite>sprites\player_victory</sprite>
     <sprite>sprites\stick_top</sprite>

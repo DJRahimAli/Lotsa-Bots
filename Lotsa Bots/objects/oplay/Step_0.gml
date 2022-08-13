@@ -19,7 +19,11 @@ else
 	
 	if (!device_mouse_check_button(touch_id, mb_any))
 	{
-		if (position_meeting(device_mouse_x(touch_id), device_mouse_y(touch_id), id)) room_goto_next();
-		touch_id = -1; //room_goto_next();
+		if (position_meeting(device_mouse_x(touch_id), device_mouse_y(touch_id), id))
+		and (room_next(room) <> -1)
+		{
+			room_goto_next();
+		}
+		touch_id = -1;
 	}
 }

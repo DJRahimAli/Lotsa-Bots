@@ -31,7 +31,11 @@ if ( enemyAmountCurrent == 0 )
 			intermissionCurrent = waveData[arenaCurrent][waveCurrent][wavevars.intermission];
 			//show_debug_message( "set to next wave and set enemyamount and cooldown" );
 		}
-		else room_goto_next();
+		else
+		if (room_next(room)<>-1)
+		{
+			room_goto_next();
+		}
 	}
 	else
 	{
@@ -52,9 +56,14 @@ if ( enemyAmountCurrent == 0 )
 if ( waveSignCooldownCurrent == 0 )
 {
 	waveSignY = lerp(waveSignY, -70, 0.1);
+	arenaSignY = lerp(arenaSignY, window_get_height() + 70, 0.1);
 }
 else
 {
 	waveSignY = lerp(waveSignY, 70, 0.1);
+	if (waveCurrent = 0)
+	{
+		arenaSignY = lerp(arenaSignY, window_get_height() - 70, 0.1);
+	}
 	waveSignCooldownCurrent--;
 }
