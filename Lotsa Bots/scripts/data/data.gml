@@ -1,7 +1,7 @@
 function WeaponData()
 {
 	weapon[weapons.none]	= [ 0,  0, 0,  0,   0,  0,  true,  0, 0,  sMissing, sMissing,	1, 1, 0, c_white, 1 ];
-	weapon[weapons.unarmed] = [ 20, 1, 10, 132, 0,  12, false, 0, 0,  -1,		sBatHitbox, 1, 1, 0, c_white, 1 ];
+	weapon[weapons.unarmed] = [ 20, 1, 10, 132, 0,  15, false, 0, 0,  -1,		sBatHitbox, 1, 1, 0, c_white, 1 ];
 	weapon[weapons.smg]		= [ 7,  1, 30, 0,   20, 8,  true,  0, 5,  sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
 	weapon[weapons.shotgun] = [ 40, 3, 20, 0,   20, 12, true,  2, 15, sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
 }
@@ -42,10 +42,10 @@ function EnemySpriteData()
 
 function EnemyWeaponData()
 {
-	weapon[weapons.none]	= [ 0,  0, 0,  0,   0,  0, true,  0, 0,  sMissing,	   sMissing,	 1, 1, 0, c_white, 1 ];
-	weapon[weapons.unarmed] = [ 80, 1, 10, 132, 0,  6, false, 0, 0,  -1,		   sBatHitbox,   1, 1, 0, c_white, 1 ];
-	weapon[weapons.smg]		= [ 36, 1, 30, 0,   15, 4, true,  0, 5,  sBulletEnemy, sBulletEnemy, 1, 1, 0, c_white, 1 ];
-	weapon[weapons.shotgun] = [ 80, 3, 20, 0,   15, 6, true,  2, 30, sBulletEnemy, sBulletEnemy, 1, 1, 0, c_white, 1 ];
+	weapon[weapons.none]	= [ 0,  0, 0,  0,  0,  0, true,  0, 0,  sMissing,	  sMissing,		1, 1, 0, c_white, 1 ];
+	weapon[weapons.unarmed] = [ 80, 1, 10, 50, 0,  4, false, 0, 0,	-1,			  sBatHitbox,   1, 1, 0, c_white, 1 ];
+	weapon[weapons.smg]		= [ 36, 1, 30, 0,  15, 2, true,  0, 5,  sBulletEnemy, sBulletEnemy, 1, 1, 0, c_white, 1 ];
+	weapon[weapons.shotgun] = [ 80, 3, 20, 0,  15, 3, true,  2, 30, sBulletEnemy, sBulletEnemy, 1, 1, 0, c_white, 1 ];
 }
 
 
