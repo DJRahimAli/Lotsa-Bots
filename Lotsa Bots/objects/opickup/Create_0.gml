@@ -1,3 +1,5 @@
+timer = 1200;
+
 pickupCurrent = 0;
 
 image_index = pickupCurrent;

@@ -49,15 +49,15 @@ function WaveData()
 {
 	waveData[arena.white][wave.one]   = [ 240, 5, 300  ];
 	waveData[arena.white][wave.two]   = [ 180, 10, 300 ];
-	waveData[arena.white][wave.three] = [ 120, 20, 300 ];
+	waveData[arena.white][wave.three] = [ 120, 15, 300 ];
 	
 	waveEnemies[arena.white][wave.one]   = [ oEnemySaw ];
 	waveEnemies[arena.white][wave.two]   = [ oEnemySaw, oEnemyBat ];
 	waveEnemies[arena.white][wave.three] = [ oEnemySaw, oEnemyBat, oEnemyShotgun ];
 	
 	
-	waveData[arena.blue][wave.one]   = [ 240, 5, 300  ];
-	waveData[arena.blue][wave.two]   = [ 180, 10, 300 ];
+	waveData[arena.blue][wave.one]   = [ 240, 10, 300 ];
+	waveData[arena.blue][wave.two]   = [ 180, 15, 300 ];
 	waveData[arena.blue][wave.three] = [ 120, 20, 300 ];
 	
 	waveEnemies[arena.blue][wave.one]   = [ oEnemySaw, oEnemyBat, oEnemyShotgun ];
@@ -65,9 +65,9 @@ function WaveData()
 	waveEnemies[arena.blue][wave.three] = [ oEnemySaw, oEnemyBat, oEnemyShotgun, oEnemySMG ];
 	
 	
-	waveData[arena.red][wave.one]   = [ 240, 10, 300 ];
-	waveData[arena.red][wave.two]   = [ 180, 15, 300 ];
-	waveData[arena.red][wave.three] = [ 120, 25, 300 ];
+	waveData[arena.red][wave.one]   = [ 240, 25, 300 ];
+	waveData[arena.red][wave.two]   = [ 180, 35, 300 ];
+	waveData[arena.red][wave.three] = [ 120, 50, 300 ];
 	
 	waveEnemies[arena.red][wave.one]   = [ oEnemySaw, oEnemyBat, oEnemyShotgun, oEnemySMG ];
 	waveEnemies[arena.red][wave.two]   = [ oEnemySaw, oEnemyBat, oEnemyShotgun, oEnemySMG ];

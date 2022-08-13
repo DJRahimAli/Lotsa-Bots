@@ -42,7 +42,7 @@ hspFraction = 0;
 hDir = 0;
 
 
-hspMaxCurrent = 4;
+hspMaxCurrent = 4.5;
 
 hAccelCurrent = 0.5;
 
@@ -57,7 +57,7 @@ vspFraction = 0;
 vDir = 0;
 
 
-vspMaxCurrent = 4;
+vspMaxCurrent = 4.5;
 
 vAccelCurrent = 0.5;
 
