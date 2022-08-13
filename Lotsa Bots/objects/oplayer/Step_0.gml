@@ -202,6 +202,8 @@ if ( playerStateCurrent == playerstate.idle )
 		{
 			oWeapon.image_speed = 1;
 			
+			if ( oWeapon.image_index == oWeapon.image_number-1 ) oWeapon.image_speed = 0;
+			
 			if ( global.mobileControls ) mDir = oAnalogueRight._direction;
 			var Diff = angle_difference( mDir, direction );
 		
