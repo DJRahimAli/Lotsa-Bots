@@ -27,11 +27,14 @@ if ( playerStateCurrent == playerstate.idle )
 	}
 	else
 	{
-		var Input = abs( oAnalogueLeft.hDir );
-	
-		if ( Input <= deadzone ) Input = 0;
-	
-		hDir = ( Input*sign(oAnalogueLeft.hDir) );
+		if ( instance_exists(oAnalogueLeft) )
+		{
+			var Input = abs( oAnalogueLeft.hDir );
+			
+			if ( Input <= deadzone ) Input = 0;
+			
+			hDir = ( Input*sign(oAnalogueLeft.hDir) );
+		}
 	}
 
 
@@ -81,11 +84,14 @@ if ( playerStateCurrent == playerstate.idle )
 	}
 	else
 	{
-		var Input = abs( oAnalogueLeft.vDir );
-	
-		if ( Input <= deadzone ) Input = 0;
-	
-		vDir = ( Input*sign(oAnalogueLeft.vDir) );
+		if ( instance_exists(oAnalogueLeft) )
+		{
+			var Input = abs( oAnalogueLeft.vDir );
+			
+			if ( Input <= deadzone ) Input = 0;
+			
+			vDir = ( Input*sign(oAnalogueLeft.vDir) );
+		}
 	}
 
 
@@ -204,7 +210,7 @@ if ( playerStateCurrent == playerstate.idle )
 		{
 			oWeapon.image_speed = 1;
 			
-			if ( global.mobileControls ) mDir = oAnalogueRight._direction;
+			if ( instance_exists(oAnalogueRight) ) mDir = oAnalogueRight._direction;
 			var Diff = angle_difference( mDir, direction );
 		
 			direction += Diff * angleAimDelay;
