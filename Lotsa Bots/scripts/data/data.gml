@@ -31,7 +31,17 @@ function WeaponSpriteData()
 
 function EnemySpriteData()
 {
-	spriteData[0] = [ [sPlayerR, sPlayerD], [sPlayerUR, sPlayerD], [sPlayerU, sPlayerD], [sPlayerUR, sPlayerD, -1], [sPlayerR, sPlayerD, -1], [sPlayerDR, sPlayerD, -1], [sPlayerD, -2], [sPlayerDR, sPlayerD] ];
+	spriteData[weapons.unarmed] = [ [sEnemyBigSwingBatR, sEnemyBigD], [sEnemyBigSwingBatUR, sEnemyBigD], [sEnemyBigSwingBatU, sEnemyBigD], [sEnemyBigSwingBatUR, sEnemyBigD, -1], [sEnemyBigSwingBatR, sEnemyBigD, -1], [sEnemyBigSwingBatDR, sEnemyBigD, -1], [sEnemyBigSwingBatD, sEnemyBigD], [sEnemyBigSwingBatDR, sEnemyBigD] ];
+	spriteData[weapons.smg]		= [ [sEnemyBigSMGR, sEnemyBigD], [sEnemyBigSMGUR, sEnemyBigD], [sEnemyBigSMGU, sEnemyBigD], [sEnemyBigSMGUR, sEnemyBigD, -1], [sEnemyBigSMGR, sEnemyBigD, -1], [sEnemyBigSMGDR, sEnemyBigD, -1], [sEnemyBigSMGD, sEnemyBigD], [sEnemyBigSMGDR, sEnemyBigD] ];
+	spriteData[weapons.shotgun] = [ [sEnemyBigShotgunR, sEnemyBigD], [sEnemyBigShotgunUR, sEnemyBigD], [sEnemyBigShotgunU, sEnemyBigD], [sEnemyBigShotgunUR, sEnemyBigD, -1], [sEnemyBigShotgunR, sEnemyBigD, -1], [sEnemyBigShotgunDR, sEnemyBigD, -1], [sEnemyBigShotgunD, sEnemyBigD], [sEnemyBigShotgunDR, sEnemyBigD] ];
+}
+
+function EnemyWeaponData()
+{
+	weapon[weapons.none]	= [ 0,  0, 0,  0,   0,  0,  true,  0, 0, sMissing,		 sMissing,	   1, 1, 0, c_white, 1 ];
+	weapon[weapons.unarmed] = [ 80, 1, 10, 132, 0,  6, false, 0, 0,  -1,			 sBatHitbox,   1, 1, 0, c_white, 1 ];
+	weapon[weapons.smg]		= [ 48, 1, 30, 0,   12, 4,  true,  0, 5, sBulletEnemy,  sBulletEnemy, 1, 1, 0, c_white, 1 ];
+	weapon[weapons.shotgun] = [ 80, 3, 20, 0,   15, 6, true,  2, 30, sBulletEnemy,  sBulletEnemy, 1, 1, 0, c_white, 1 ];
 }
 
 
@@ -42,24 +52,24 @@ function WaveData()
 	waveData[arena.white][wave.three] = [ 120, 20, 300 ];
 	
 	waveEnemies[arena.white][wave.one]   = [ oEnemySaw ];
-	waveEnemies[arena.white][wave.two]   = [ oEnemySaw ];
-	waveEnemies[arena.white][wave.three] = [ oEnemySaw ];
+	waveEnemies[arena.white][wave.two]   = [ oEnemySaw, oEnemyBat ];
+	waveEnemies[arena.white][wave.three] = [ oEnemySaw, oEnemyBat, oEnemyShotgun ];
 	
 	
 	waveData[arena.blue][wave.one]   = [ 240, 5, 300  ];
 	waveData[arena.blue][wave.two]   = [ 180, 10, 300 ];
 	waveData[arena.blue][wave.three] = [ 120, 20, 300 ];
 	
-	waveEnemies[arena.blue][wave.one]   = [ oEnemySaw ];
-	waveEnemies[arena.blue][wave.two]   = [ oEnemySaw ];
-	waveEnemies[arena.blue][wave.three] = [ oEnemySaw ];
+	waveEnemies[arena.blue][wave.one]   = [ oEnemySaw, oEnemyBat, oEnemyShotgun ];
+	waveEnemies[arena.blue][wave.two]   = [ oEnemySaw, oEnemyBat, oEnemyShotgun ];
+	waveEnemies[arena.blue][wave.three] = [ oEnemySaw, oEnemyBat, oEnemyShotgun, oEnemySMG ];
 	
 	
-	waveData[arena.red][wave.one]   = [ 240, 5, 300  ];
-	waveData[arena.red][wave.two]   = [ 180, 10, 300 ];
-	waveData[arena.red][wave.three] = [ 120, 20, 300 ];
+	waveData[arena.red][wave.one]   = [ 240, 10, 300 ];
+	waveData[arena.red][wave.two]   = [ 180, 15, 300 ];
+	waveData[arena.red][wave.three] = [ 120, 25, 300 ];
 	
-	waveEnemies[arena.red][wave.one]   = [ oEnemySaw ];
-	waveEnemies[arena.red][wave.two]   = [ oEnemySaw ];
-	waveEnemies[arena.red][wave.three] = [ oEnemySaw ];
+	waveEnemies[arena.red][wave.one]   = [ oEnemySaw, oEnemyBat, oEnemyShotgun, oEnemySMG ];
+	waveEnemies[arena.red][wave.two]   = [ oEnemySaw, oEnemyBat, oEnemyShotgun, oEnemySMG ];
+	waveEnemies[arena.red][wave.three] = [ oEnemySaw, oEnemyBat, oEnemyShotgun, oEnemySMG ];
 }

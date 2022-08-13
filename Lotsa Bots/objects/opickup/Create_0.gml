@@ -1,4 +1,4 @@
-pickupCurrent = pickup.medkitsmall;
+pickupCurrent = 0;
 
 image_index = pickupCurrent;
 

@@ -32,22 +32,11 @@ hspFraction = 0;
 hDir = 0;
 
 
-hspMaxGround = 2;
-//hspMaxAir = 5;
-//hspMaxFly = 5;
-hspMaxCurrent = hspMaxGround; //0;
+hspMaxCurrent = 2;
 
+hAccelCurrent = 0.5;
 
-hAccelGround = 0.5;
-//hAccelAir = 0.4;
-//hAccelFly = -1;
-hAccelCurrent = hAccelGround; //0;
-
-
-hDecelGround = 0.2;
-//hDecelAir = 0;
-//hDecelFly = -1;
-hDecelCurrent = hDecelGround; //0;
+hDecelCurrent = 0.2;
 
 
 vsp = 0;
@@ -57,16 +46,11 @@ vspFraction = 0;
 vDir = 0;
 
 
-vspMaxGround = 2;
-vspMaxCurrent = vspMaxGround; //0;
+vspMaxCurrent = 2;
 
+vAccelCurrent = 0.5;
 
-vAccelGround = 0.5;
-vAccelCurrent = vAccelGround; //0;
-
-
-vDecelGround = 0.2;
-vDecelCurrent = vDecelGround; //0;
+vDecelCurrent = 0.2;
 
 noclip = false;
 #endregion
