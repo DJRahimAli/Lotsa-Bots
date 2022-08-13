@@ -1,7 +1,7 @@
 function WeaponData()
 {
 	weapon[weapons.none] =	  [ 0,  0, 0,  0,   0,  0,  true,  0, 0,  sMissing, sMissing,	1, 1, 0, c_white, 1 ];
-	weapon[weapons.unarmed] = [ 30, 1, 10, 132, 0,  12, false, 0, 0,  -1,		sBatHitbox, 1, 1, 0, c_white, 1 ];
+	weapon[weapons.unarmed] = [ 20, 1, 10, 132, 0,  12, false, 0, 0,  -1,		sBatHitbox, 1, 1, 0, c_white, 1 ];
 	weapon[weapons.smg]		= [ 5,  1, 30, 0,   20, 5,  true,  0, 5,  sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
 	weapon[weapons.shotgun] = [ 40, 3, 20, 0,   20, 8,  true,  2, 15, sBullet,  sBullet,	1, 1, 0, c_white, 1 ];
 }
