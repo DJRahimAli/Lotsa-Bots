@@ -18,14 +18,14 @@ if (cooldown = 0)
 	#region /*What happens at each hp*/
 	if ( hp != 0 )
 	{
-		audio_play_sound(sndBulletHitWall, 0, false);
+		if ( !audio_is_playing(sndBulletHitWall) ) audio_play_sound(sndBulletHitWall, 0, false);
 		sprite_index = sBrickBreak;
 		if ( hp < image_number ) image_index++;
 		image_speed = 0;
 	}
 	else
 	{
-		audio_play_sound(sndWallBreak, 0, false);
+		if ( !audio_is_playing(sndWallBreak) ) audio_play_sound(sndWallBreak, 0, false);
 		instance_destroy();
 	}
 	#endregion /*What happens at each hp END*/
