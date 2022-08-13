@@ -209,12 +209,33 @@ if ( playerStateCurrent == playerstate.idle )
 			
 			cooldown = max( 0, cooldown-1 );
 			
-			if ( cooldown != 0 && oWeapon.image_index == oWeapon.image_number-1 ) oWeapon.image_speed = 0;
+			if ( cooldown != 0 )
+			{
+				if ( oWeapon.image_index == oWeapon.image_number-1 ) oWeapon.image_speed = 0;
+			}
 			
 			if ( keyPrimary )
 			{
 				if ( cooldown == 0 )
 				{
+					switch (weaponCurrent)
+					{
+						case weapons.unarmed:
+						{
+							audio_play_sound( sndBat, 5, false );
+						} break;
+						
+						case weapons.smg:
+						{
+							if (!audio_is_playing(sndSMG)) audio_play_sound( sndSMG, 5, true );
+						} break;
+						
+						case weapons.shotgun:
+						{
+							audio_play_sound( sndShotgun, 5, false );
+						} break;
+					}
+					
 					cooldown = weapon[weaponCurrent][weaponvars.cooldown];
 					repeat(weapon[weaponCurrent][weaponvars.amount])
 					{
@@ -241,7 +262,11 @@ if ( playerStateCurrent == playerstate.idle )
 					}
 				}
 			}
-			else if ( cooldown == 0 ) weaponStateCurrent = weaponstate.idle;
+			else
+			{
+				if ( weaponCurrent == weapons.smg ) audio_stop_sound( sndSMG );
+				if ( cooldown == 0 ) weaponStateCurrent = weaponstate.idle;
+			}
 		} break;
 	}
 	#endregion

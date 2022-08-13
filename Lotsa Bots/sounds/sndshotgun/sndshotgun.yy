@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndplayerhit.wav",
-  "duration": 0.548073,
+  "soundFile": "sndshotgun.wav",
+  "duration": 0.927891,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndPlayerHit",
+  "name": "sndShotgun",
   "tags": [],
   "resourceType": "GMSound",
 }
