@@ -260,8 +260,9 @@ if ( playerStateCurrent == playerstate.idle )
 		if ( hpCurrent == 0 )
 		{
 			playerStateCurrent = playerstate.dead;
-			image_speed = 1;
+			flashAlphaCurrent = 0;
 			instance_destroy(oWeapon);
+			image_speed = 1;
 			if ( global.mobileControls ) layer_sequence_destroy(sequenceControls);
 			hpLast = 0;
 		}
