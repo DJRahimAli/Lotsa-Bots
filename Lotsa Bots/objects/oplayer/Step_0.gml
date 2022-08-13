@@ -184,6 +184,8 @@ if ( playerStateCurrent == playerstate.idle )
 			oWeapon.image_index = 0;
 			oWeapon.image_speed = 0;
 			
+			if (audio_is_playing(sndSMG)) audio_stop_sound( sndSMG );
+			
 			if ( hsp != 0 || vsp != 0 )
 			{
 				Diff = angle_difference( pDir, direction );
@@ -222,7 +224,6 @@ if ( playerStateCurrent == playerstate.idle )
 					{
 						case weapons.unarmed:
 						{
-							if (audio_is_playing(sndSMG)) audio_stop_sound( sndSMG );
 							audio_play_sound( sndBat, 5, false );
 						} break;
 						
@@ -233,7 +234,6 @@ if ( playerStateCurrent == playerstate.idle )
 						
 						case weapons.shotgun:
 						{
-							if (audio_is_playing(sndSMG)) audio_stop_sound( sndSMG );
 							audio_play_sound( sndShotgun, 5, false );
 						} break;
 					}
@@ -266,7 +266,6 @@ if ( playerStateCurrent == playerstate.idle )
 			}
 			else
 			{
-				if (audio_is_playing(sndSMG)) audio_stop_sound( sndSMG );
 				if ( cooldown == 0 ) weaponStateCurrent = weaponstate.idle;
 			}
 		} break;
@@ -288,6 +287,7 @@ if ( playerStateCurrent == playerstate.idle )
 		{
 			playerStateCurrent = playerstate.dead;
 			flashAlphaCurrent = 0;
+			if (audio_is_playing(sndSMG)) audio_stop_sound( sndSMG );
 			instance_destroy(oWeapon);
 			image_speed = 1;
 			if ( global.mobileControls ) layer_sequence_destroy(sequenceControls);
