@@ -24,8 +24,8 @@ if ( room != rTitle )
 	else
 	{
 		// Smoothly move the camera to the target position
-		x = approach(x, targetX, CAM_SMOOTH);
-		y = approach(y, targetY, CAM_SMOOTH);
+		x = lerp(x, targetX, CAM_SMOOTH);
+		y = lerp(y, targetY, CAM_SMOOTH);
 	}
 	
 	
