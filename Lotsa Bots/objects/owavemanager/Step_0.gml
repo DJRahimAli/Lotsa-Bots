@@ -54,12 +54,12 @@ if ( enemyAmountCurrent == 0 )
 
 if ( waveSignCooldownCurrent == 0 )
 {
-	waveSignY = lerp(waveSignY, -70, 0.1);
-	arenaSignY = lerp(arenaSignY, display_get_gui_height() + 70, 0.1);
+	waveSignY = round(lerp(waveSignY, -70, 0.1));
+	arenaSignY = round(lerp(arenaSignY, display_get_gui_height() + 70, 0.1));
 }
 else
 {
-	waveSignY = lerp(waveSignY, 70, 0.1);
-	if (waveCurrent = wave.one) arenaSignY = lerp(arenaSignY, display_get_gui_height() - 70, 0.1);
+	waveSignY = round(lerp(waveSignY, 70, 0.1));
+	if (waveCurrent = wave.one) arenaSignY = round(lerp(arenaSignY, display_get_gui_height() - 70, 0.1));
 	waveSignCooldownCurrent--;
 }
