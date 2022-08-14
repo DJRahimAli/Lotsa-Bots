@@ -15,10 +15,7 @@ else
 {
 	if (!device_mouse_check_button(touch_id, mb_any))
 	{
-		if (position_meeting(device_mouse_x(touch_id), device_mouse_y(touch_id), id))
-		{
-			oPauseManager.pause = true;
-		}
+		if (position_meeting(device_mouse_x(touch_id), device_mouse_y(touch_id), id)) oPauseManager.pause = true;
 		touch_id = -1;
 	}
 }
