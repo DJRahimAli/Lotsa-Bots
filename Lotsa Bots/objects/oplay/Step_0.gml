@@ -1,3 +1,5 @@
+if (!audio_is_playing(musTitle)) audio_play_sound( musTitle, 6, true );
+
 if ( touch_id == -1 )
 {
 	image_index = 0;
